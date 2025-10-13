@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Training from "./pages/Training";
+import SubtestExercises from "./pages/SubtestExercises";
 import Tests from "./pages/Tests";
 import Courses from "./pages/Courses";
 import Dashboard from "./pages/Dashboard";
@@ -27,6 +28,7 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/training" element={<Training />} />
+              <Route path="/training/:subtestId" element={<SubtestExercises />} />
               <Route path="/tests" element={<Tests />} />
               <Route path="/courses" element={<Courses />} />
               <Route path="/dashboard" element={<Dashboard />} />
