@@ -10,6 +10,7 @@ import Training from "./pages/Training";
 import SubtestExercises from "./pages/SubtestExercises";
 import Tests from "./pages/Tests";
 import Courses from "./pages/Courses";
+import CourseDetail from "./pages/CourseDetail";
 import Dashboard from "./pages/Dashboard";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
@@ -31,6 +32,7 @@ const App = () => (
               <Route path="/training/:subtestId" element={<SubtestExercises />} />
               <Route path="/tests" element={<Tests />} />
               <Route path="/courses" element={<Courses />} />
+              <Route path="/courses/:courseId" element={<CourseDetail />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/about" element={<About />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
