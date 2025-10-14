@@ -792,6 +792,1217 @@ export const coursesData: CourseContent[] = [
       ],
     },
   },
+
+  // NOUVEAUX COURS - RAISONNEMENT LOGIQUE
+  {
+    id: "logic-analogies",
+    title: "Les Analogies Verbales",
+    category: "Raisonnement Logique",
+    type: "Fiche",
+    duration: "8 min",
+    content: {
+      introduction: "Les analogies verbales testent votre capacité à identifier des relations logiques entre les mots.",
+      sections: [
+        {
+          title: "Types de relations courantes",
+          content: "Relations à reconnaître rapidement :",
+          examples: [
+            "**Synonymie** : content/joyeux, rapide/véloce",
+            "**Antonymie** : chaud/froid, grand/petit",
+            "**Partie/Tout** : roue/voiture, page/livre",
+            "**Cause/Effet** : feu/chaleur, pluie/humidité",
+            "**Fonction** : couteau/couper, stylo/écrire",
+            "**Genre/Espèce** : fruit/pomme, animal/chien",
+          ],
+        },
+        {
+          title: "Méthodologie de résolution",
+          content: "Approche systématique :",
+          tips: [
+            "1. Identifier la relation entre les 2 premiers mots",
+            "2. Formuler cette relation en une phrase claire",
+            "3. Appliquer cette même relation aux options",
+            "4. Éliminer les réponses qui ne correspondent pas",
+          ],
+        },
+        {
+          title: "Pièges à éviter",
+          content: "Erreurs fréquentes :",
+          examples: [
+            "Ne pas confondre relation proche et relation identique",
+            "Attention aux faux amis (mots qui semblent liés mais ne le sont pas)",
+            "Ne pas se fier uniquement au domaine sémantique",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Formulez toujours la relation en une phrase",
+        "La relation doit être exactement la même",
+        "Éliminez d'abord les réponses impossibles",
+      ],
+    },
+  },
+  {
+    id: "logic-matrices",
+    title: "Matrices et Tableaux Logiques",
+    category: "Raisonnement Logique",
+    type: "Cours",
+    duration: "14 min",
+    content: {
+      introduction: "Les matrices logiques nécessitent de repérer des patterns en 2 dimensions (lignes et colonnes).",
+      sections: [
+        {
+          title: "Règles horizontales",
+          content: "Patterns qui se répètent sur les lignes :",
+          examples: [
+            "**Progression** : Chaque élément de la ligne suit une suite logique",
+            "**Rotation** : Les éléments tournent d'une certaine manière",
+            "**Combinaison** : L3 = L1 + L2 ou L1 - L2",
+          ],
+        },
+        {
+          title: "Règles verticales",
+          content: "Patterns qui se répètent sur les colonnes :",
+          tips: [
+            "Vérifiez si la règle des lignes s'applique aussi aux colonnes",
+            "Parfois, lignes et colonnes ont des règles différentes",
+            "La case manquante peut être déterminée par ligne OU colonne",
+          ],
+        },
+        {
+          title: "Règles diagonales",
+          content: "Patterns plus complexes :",
+          examples: [
+            "Diagonale principale (haut-gauche à bas-droite)",
+            "Diagonale secondaire",
+            "Symétrie centrale ou axiale",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Testez d'abord les règles horizontales",
+        "Vérifiez ensuite les règles verticales",
+        "Si bloqué, cherchez des symétries",
+        "Utilisez l'élimination pour les cas complexes",
+      ],
+    },
+  },
+  {
+    id: "logic-ensembles",
+    title: "Raisonnement sur les Ensembles",
+    category: "Raisonnement Logique",
+    type: "Fiche",
+    duration: "10 min",
+    content: {
+      introduction: "Les problèmes d'ensembles testent votre compréhension des relations d'inclusion, intersection et complémentarité.",
+      sections: [
+        {
+          title: "Opérations sur les ensembles",
+          content: "Opérations fondamentales à maîtriser :",
+          examples: [
+            "**Union (A ∪ B)** : Tous les éléments de A ou B",
+            "**Intersection (A ∩ B)** : Éléments communs à A et B",
+            "**Complémentaire (Ā)** : Éléments qui ne sont pas dans A",
+            "**Différence (A - B)** : Éléments de A qui ne sont pas dans B",
+          ],
+        },
+        {
+          title: "Diagrammes de Venn",
+          content: "Représentation visuelle indispensable :",
+          tips: [
+            "Dessinez toujours un diagramme pour visualiser",
+            "Identifiez les zones : A seul, B seul, A∩B, hors des deux",
+            "Utilisez les nombres donnés pour remplir chaque zone",
+          ],
+        },
+        {
+          title: "Problèmes de dénombrement",
+          content: "Formules essentielles :",
+          examples: [
+            "**|A ∪ B| = |A| + |B| - |A ∩ B|**",
+            "Si les ensembles sont disjoints : |A ∪ B| = |A| + |B|",
+            "Complément : |Ā| = Total - |A|",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Toujours dessiner un diagramme de Venn",
+        "Attention à ne pas compter deux fois les intersections",
+        "Vérifiez que votre résultat est cohérent avec le total",
+      ],
+    },
+  },
+  {
+    id: "logic-combinatoire",
+    title: "Introduction à la Combinatoire",
+    category: "Raisonnement Logique",
+    type: "Cours",
+    duration: "16 min",
+    content: {
+      introduction: "La combinatoire permet de compter le nombre de façons d'organiser ou de choisir des éléments.",
+      sections: [
+        {
+          title: "Principe multiplicatif",
+          content: "Base de tous les dénombrements :",
+          examples: [
+            "Si action 1 : n possibilités et action 2 : m possibilités",
+            "Alors total = n × m possibilités",
+            "**Exemple** : 4 chemises et 3 pantalons = 4 × 3 = 12 tenues",
+          ],
+        },
+        {
+          title: "Arrangements et Permutations",
+          content: "Ordre compte :",
+          examples: [
+            "**Permutations de n éléments** : n! = n × (n-1) × ... × 1",
+            "**Arrangements de k parmi n** : A(n,k) = n!/(n-k)!",
+            "**Exemple** : Podium de 3 sur 10 coureurs = 10×9×8 = 720",
+          ],
+        },
+        {
+          title: "Combinaisons",
+          content: "Ordre ne compte pas :",
+          examples: [
+            "**Formule** : C(n,k) = n! / (k! × (n-k)!)",
+            "**Exemple** : Choisir 3 élèves parmi 10 = C(10,3) = 120",
+            "**Propriété** : C(n,k) = C(n, n-k)",
+          ],
+        },
+        {
+          title: "Quand utiliser quoi ?",
+          content: "Différencier les situations :",
+          tips: [
+            "**Ordre important + tous différents** → Arrangements",
+            "**Ordre important + répétitions possibles** → Principe multiplicatif",
+            "**Ordre pas important** → Combinaisons",
+            "**Question clé** : Est-ce que ABC ≠ BAC ? Si oui, ordre compte",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Identifiez si l'ordre compte ou non",
+        "Vérifiez si les répétitions sont possibles",
+        "Connaître par cœur : n!, C(n,2) = n(n-1)/2",
+        "En cas de doute, listez quelques cas pour identifier le pattern",
+      ],
+    },
+  },
+
+  // NOUVEAUX COURS - CALCUL
+  {
+    id: "calcul-fractions",
+    title: "Maîtrise des Fractions",
+    category: "Calcul",
+    type: "Cours",
+    duration: "13 min",
+    content: {
+      introduction: "Les fractions sont omniprésentes dans les calculs TAGE MAGE. Maîtriser les opérations vous fera gagner un temps précieux.",
+      sections: [
+        {
+          title: "Addition et soustraction",
+          content: "Mettre au même dénominateur :",
+          examples: [
+            "**Même dénominateur** : 2/5 + 1/5 = 3/5",
+            "**Dénominateurs différents** : 1/3 + 1/4 = 4/12 + 3/12 = 7/12",
+            "**Astuce** : Pour a/b ± c/d = (ad ± bc) / bd",
+          ],
+        },
+        {
+          title: "Multiplication et division",
+          content: "Opérations directes :",
+          examples: [
+            "**Multiplication** : (a/b) × (c/d) = (a×c) / (b×d)",
+            "**Division** : (a/b) ÷ (c/d) = (a/b) × (d/c)",
+            "**Simplifiez avant** de calculer pour éviter les grands nombres",
+          ],
+        },
+        {
+          title: "Comparaison de fractions",
+          content: "Techniques rapides :",
+          tips: [
+            "**Même dénominateur** : Comparez les numérateurs",
+            "**Même numérateur** : La plus petite est celle avec le plus grand dénominateur",
+            "**Produits en croix** : a/b < c/d si ad < bc",
+            "**Conversion décimale** : Si calcul mental facile",
+          ],
+        },
+        {
+          title: "Fractions de fractions",
+          content: "Simplification de fractions complexes :",
+          examples: [
+            "(2/3) / (4/5) = (2/3) × (5/4) = 10/12 = 5/6",
+            "Multipliez haut et bas par le même nombre pour simplifier",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Toujours simplifier avant de calculer",
+        "Connaître les équivalents décimaux courants (1/2, 1/3, 1/4, 1/5)",
+        "Pour diviser, multipliez par l'inverse",
+        "Vérifiez la cohérence du résultat",
+      ],
+    },
+  },
+  {
+    id: "calcul-puissances",
+    title: "Puissances et Racines",
+    category: "Calcul",
+    type: "Fiche",
+    duration: "11 min",
+    content: {
+      introduction: "Les puissances et racines apparaissent régulièrement. Connaître les propriétés permet de simplifier rapidement.",
+      sections: [
+        {
+          title: "Propriétés des puissances",
+          content: "Règles de calcul fondamentales :",
+          examples: [
+            "**a^m × a^n = a^(m+n)**",
+            "**a^m ÷ a^n = a^(m-n)**",
+            "**(a^m)^n = a^(m×n)**",
+            "**a^0 = 1** (pour a ≠ 0)",
+            "**a^(-n) = 1/a^n**",
+          ],
+        },
+        {
+          title: "Puissances de 2",
+          content: "À connaître par cœur :",
+          examples: [
+            "2^1 = 2, 2^2 = 4, 2^3 = 8, 2^4 = 16, 2^5 = 32",
+            "2^6 = 64, 2^7 = 128, 2^8 = 256, 2^9 = 512, 2^10 = 1024",
+          ],
+        },
+        {
+          title: "Racines carrées",
+          content: "Propriétés et simplification :",
+          examples: [
+            "**√(a×b) = √a × √b**",
+            "**√(a/b) = √a / √b**",
+            "**√(a²) = |a|** (valeur absolue)",
+            "**Simplification** : √48 = √(16×3) = 4√3",
+          ],
+        },
+        {
+          title: "Racines à connaître",
+          content: "Valeurs courantes :",
+          tips: [
+            "√1=1, √4=2, √9=3, √16=4, √25=5, √36=6",
+            "√49=7, √64=8, √81=9, √100=10, √121=11, √144=12",
+            "√2 ≈ 1.41, √3 ≈ 1.73, √5 ≈ 2.24",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Connaître les puissances de 2 jusqu'à 2^10",
+        "Simplifier les racines en factorisant",
+        "Attention : √(a+b) ≠ √a + √b",
+        "Utiliser les propriétés pour simplifier avant de calculer",
+      ],
+    },
+  },
+  {
+    id: "calcul-proportionnalite",
+    title: "Proportionnalité et Échelles",
+    category: "Calcul",
+    type: "Fiche",
+    duration: "9 min",
+    content: {
+      introduction: "La proportionnalité est un concept clé qui revient dans de nombreux problèmes.",
+      sections: [
+        {
+          title: "Propriété fondamentale",
+          content: "Égalité des rapports :",
+          examples: [
+            "Si a/b = c/d, alors ad = bc (produits en croix)",
+            "**Exemple** : Si 3 kg coûtent 12€, 5 kg coûtent : 5×12/3 = 20€",
+          ],
+        },
+        {
+          title: "Tableaux de proportionnalité",
+          content: "Méthode du coefficient de proportionnalité :",
+          tips: [
+            "Identifier le coefficient : y = k × x",
+            "Une fois k trouvé, tous les autres rapports sont y/x = k",
+            "Méthode alternative : produit en croix",
+          ],
+        },
+        {
+          title: "Échelles et plans",
+          content: "Applications pratiques :",
+          examples: [
+            "**Échelle 1/n** : 1 cm sur le plan = n cm en réalité",
+            "**Distance réelle** = Distance plan × n",
+            "**Distance plan** = Distance réelle / n",
+          ],
+        },
+        {
+          title: "Vitesse comme proportionnalité",
+          content: "Lien avec distance et temps :",
+          examples: [
+            "Distance proportionnelle au temps (vitesse constante)",
+            "Si double temps → double distance",
+            "Si moitié vitesse → double temps pour même distance",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Vérifiez toujours la proportionnalité avant d'appliquer les formules",
+        "Produits en croix = méthode universelle",
+        "Attention aux situations non proportionnelles",
+        "Identifiez le coefficient multiplicateur",
+      ],
+    },
+  },
+  {
+    id: "calcul-geometrie",
+    title: "Formules Géométriques Essentielles",
+    category: "Calcul",
+    type: "Cours",
+    duration: "14 min",
+    content: {
+      introduction: "Les problèmes de géométrie nécessitent de connaître les formules d'aires, périmètres et volumes.",
+      sections: [
+        {
+          title: "Périmètres",
+          content: "Formules des figures planes :",
+          examples: [
+            "**Carré** : P = 4c (c = côté)",
+            "**Rectangle** : P = 2(L + l)",
+            "**Cercle** : P = 2πr = πd (périmètre = circonférence)",
+            "**Triangle** : P = a + b + c",
+          ],
+        },
+        {
+          title: "Aires",
+          content: "Surfaces des figures courantes :",
+          examples: [
+            "**Carré** : A = c²",
+            "**Rectangle** : A = L × l",
+            "**Triangle** : A = (base × hauteur) / 2",
+            "**Cercle** : A = πr²",
+            "**Trapèze** : A = ((grande base + petite base) × hauteur) / 2",
+          ],
+        },
+        {
+          title: "Volumes",
+          content: "Solides usuels :",
+          examples: [
+            "**Cube** : V = c³",
+            "**Pavé** : V = L × l × h",
+            "**Cylindre** : V = πr²h",
+            "**Sphère** : V = (4/3)πr³",
+            "**Cône** : V = (1/3)πr²h",
+          ],
+        },
+        {
+          title: "Théorème de Pythagore",
+          content: "Triangle rectangle :",
+          examples: [
+            "**a² + b² = c²** (c = hypoténuse)",
+            "Vérifiez si c'est un triangle rectangle célèbre : 3-4-5, 5-12-13",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Connaître π ≈ 3.14 ou 22/7",
+        "Distinguer périmètre (1D), aire (2D) et volume (3D)",
+        "Vérifier la cohérence des unités",
+        "Dessiner un schéma pour visualiser",
+      ],
+    },
+  },
+
+  // NOUVEAUX COURS - EXPRESSION
+  {
+    id: "expression-conjugaison",
+    title: "Temps et Modes Verbaux",
+    category: "Expression",
+    type: "Fiche",
+    duration: "12 min",
+    content: {
+      introduction: "La conjugaison française comporte de nombreux pièges. Voici les erreurs les plus fréquentes au TAGE MAGE.",
+      sections: [
+        {
+          title: "Concordance des temps",
+          content: "Accord entre proposition principale et subordonnée :",
+          examples: [
+            "**Principale au présent** → Subordonnée : présent, futur, passé composé",
+            "**Principale au passé** → Subordonnée : imparfait, plus-que-parfait",
+            "Je pense qu'il **viendra** ✓ / Je pensais qu'il **viendrait** ✓",
+          ],
+        },
+        {
+          title: "Subjonctif ou indicatif ?",
+          content: "Modes après certaines expressions :",
+          examples: [
+            "**Subjonctif** : Il faut que, bien que, pour que, avant que, jusqu'à ce que",
+            "**Indicatif** : Il est probable que, après que, pendant que",
+            "**Piège** : 'après que' + indicatif (même si subjonctif courant à l'oral)",
+          ],
+        },
+        {
+          title: "Futur ou conditionnel ?",
+          content: "Différencier les deux modes :",
+          tips: [
+            "**Futur** : Fait certain, prévision (Je **viendrai** demain)",
+            "**Conditionnel** : Hypothèse, politesse (Je **viendrais** si je pouvais)",
+            "Dans 'si' + imparfait → conditionnel (Si j'avais, je ferais)",
+          ],
+        },
+        {
+          title: "Verbes irréguliers courants",
+          content: "Formes à connaître :",
+          examples: [
+            "**Faire** : je fais, tu fais, il fait, nous faisons",
+            "**Voir** : je vois, nous voyons (pas 'voyons')",
+            "**Prendre** : je prends, tu prends, il prend, nous prenons",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Vérifiez la concordance des temps",
+        "Après 'que', déterminez si subjonctif ou indicatif",
+        "Distinguez futur (certitude) et conditionnel (hypothèse)",
+        "Connaissez les irréguliers fréquents",
+      ],
+    },
+  },
+  {
+    id: "expression-vocabulaire",
+    title: "Vocabulaire et Nuances",
+    category: "Expression",
+    type: "Fiche",
+    duration: "10 min",
+    content: {
+      introduction: "Le choix du mot juste est crucial. Apprenez à distinguer les termes proches.",
+      sections: [
+        {
+          title: "Paronymes fréquents",
+          content: "Mots qui se ressemblent mais ont des sens différents :",
+          examples: [
+            "**Éminent / Imminent** : remarquable / qui va se produire",
+            "**Allocation / Allocution** : aide financière / discours",
+            "**Effraction / Infraction** : entrée par force / violation d'une règle",
+            "**Prolongation / Prolongement** : extension dans le temps / dans l'espace",
+          ],
+        },
+        {
+          title: "Confusions courantes",
+          content: "Paires de mots souvent mélangés :",
+          examples: [
+            "**Davantage / D'avantage** : plus / un avantage supplémentaire",
+            "**Plutôt / Plus tôt** : de préférence / avant dans le temps",
+            "**Quoique / Quoi que** : bien que / quelle que soit la chose",
+          ],
+        },
+        {
+          title: "Registres de langue",
+          content: "Adapter le vocabulaire au contexte :",
+          tips: [
+            "**Soutenu** : s'enquérir, quérir, se départir",
+            "**Courant** : demander, chercher, abandonner",
+            "**Familier** : causer, bosser, se magner",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Connaître les paronymes fréquents",
+        "Attention au contexte pour le bon mot",
+        "Privilégier le registre courant ou soutenu",
+        "En cas de doute, éliminer les options extrêmes",
+      ],
+    },
+  },
+  {
+    id: "expression-syntaxe",
+    title: "Constructions Syntaxiques",
+    category: "Expression",
+    type: "Cours",
+    duration: "13 min",
+    content: {
+      introduction: "La syntaxe française impose des règles strictes de construction de phrases.",
+      sections: [
+        {
+          title: "Prépositions après les verbes",
+          content: "Chaque verbe a sa préposition :",
+          examples: [
+            "**à** : s'intéresser à, participer à, tenir à",
+            "**de** : se souvenir de, se méfier de, avoir besoin de",
+            "**aucune** : attendre (pas 'attendre après')",
+          ],
+        },
+        {
+          title: "Compléments du verbe",
+          content: "COD, COI et compléments circonstanciels :",
+          tips: [
+            "**COD** : verbe + quoi/qui ? (Je vois **la maison**)",
+            "**COI** : verbe + à qui/à quoi ? (Je parle **à Marie**)",
+            "**CC** : où, quand, comment, pourquoi",
+          ],
+        },
+        {
+          title: "Propositions relatives",
+          content: "Qui, que, dont, où :",
+          examples: [
+            "**Qui** : sujet de la relative (L'homme **qui** parle)",
+            "**Que** : COD de la relative (Le livre **que** je lis)",
+            "**Dont** : complément du nom (La maison **dont** le toit)",
+            "**Où** : complément de lieu/temps (Le jour **où** je suis né)",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Chaque verbe a sa préposition spécifique",
+        "Identifier la fonction du pronom relatif",
+        "Vérifier la construction attendue après le verbe",
+        "Attention aux anglicismes syntaxiques",
+      ],
+    },
+  },
+  {
+    id: "expression-ponctuation",
+    title: "Règles de Ponctuation",
+    category: "Expression",
+    type: "Fiche",
+    duration: "8 min",
+    content: {
+      introduction: "La ponctuation structure le texte et change parfois complètement le sens.",
+      sections: [
+        {
+          title: "Virgules et sens",
+          content: "Placement crucial :",
+          examples: [
+            "**Restrictif** : Les enfants qui jouent sont heureux (seulement ceux qui jouent)",
+            "**Descriptif** : Les enfants, qui jouent, sont heureux (tous les enfants jouent)",
+          ],
+        },
+        {
+          title: "Deux-points",
+          content: "Introduit une explication, énumération, citation :",
+          tips: [
+            "Après les deux-points, pas de majuscule (sauf citation)",
+            "Un seul deux-points par phrase",
+          ],
+        },
+        {
+          title: "Point-virgule",
+          content: "Entre deux propositions liées :",
+          examples: [
+            "Plus fort que la virgule, plus faible que le point",
+            "Utilisé pour séparer des éléments d'énumération complexes",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Virgule change le sens selon sa position",
+        "Pas de majuscule après deux-points (sauf exception)",
+        "Point-virgule = lien logique entre propositions",
+      ],
+    },
+  },
+
+  // NOUVEAUX COURS - CONDITIONS MINIMALES
+  {
+    id: "conditions-algebre",
+    title: "Conditions Minimales en Algèbre",
+    category: "Conditions Minimales",
+    type: "Fiche",
+    duration: "11 min",
+    content: {
+      introduction: "Les questions algébriques en Conditions Minimales nécessitent de compter les équations et inconnues.",
+      sections: [
+        {
+          title: "Règle de base",
+          content: "Inconnues et équations :",
+          tips: [
+            "**n inconnues nécessitent n équations indépendantes**",
+            "2 inconnues (x, y) → besoin de 2 équations",
+            "1 inconnue → 1 équation suffit",
+          ],
+        },
+        {
+          title: "Équations indépendantes",
+          content: "Attention aux équations redondantes :",
+          examples: [
+            "x + y = 5 et 2x + 2y = 10 → **même équation** (redondante)",
+            "x + y = 5 et x - y = 1 → **indépendantes** ✓",
+          ],
+        },
+        {
+          title: "Stratégie de résolution",
+          content: "Méthode pas à pas :",
+          tips: [
+            "1. Compter les inconnues dans la question",
+            "2. Vérifier si l'énoncé donne des équations",
+            "3. Chaque condition = potentiellement 1 équation",
+            "4. Vérifier l'indépendance des équations",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Compter inconnues ET équations indépendantes",
+        "Vérifier que les équations sont vraiment différentes",
+        "Parfois une condition donne 2 équations (système)",
+      ],
+    },
+  },
+  {
+    id: "conditions-geometrie",
+    title: "Conditions Minimales en Géométrie",
+    category: "Conditions Minimales",
+    type: "Fiche",
+    duration: "10 min",
+    content: {
+      introduction: "Les problèmes géométriques nécessitent de vérifier si on a assez d'informations pour calculer.",
+      sections: [
+        {
+          title: "Triangles",
+          content: "Informations suffisantes :",
+          examples: [
+            "**3 côtés** → tout calculable",
+            "**2 côtés + angle entre eux** → tout calculable",
+            "**1 côté + 2 angles** → tout calculable (somme = 180°)",
+            "**2 côtés sans angle** → INSUFFISANT",
+          ],
+        },
+        {
+          title: "Cercles",
+          content: "Rayon ou diamètre suffit :",
+          tips: [
+            "Connaître r → calculer périmètre et aire",
+            "Connaître périmètre → calculer r et aire",
+            "Connaître aire → calculer r et périmètre",
+          ],
+        },
+        {
+          title: "Volumes",
+          content: "Besoin de toutes les dimensions :",
+          examples: [
+            "**Cube** : 1 arête suffit",
+            "**Pavé** : besoin de L, l, h (3 dimensions)",
+            "**Cylindre** : besoin de r et h",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Identifiez la formule nécessaire",
+        "Comptez les inconnues dans la formule",
+        "Vérifiez si les conditions donnent ces valeurs",
+      ],
+    },
+  },
+  {
+    id: "conditions-logique",
+    title: "Pièges Logiques en Conditions Minimales",
+    category: "Conditions Minimales",
+    type: "Guide",
+    duration: "12 min",
+    content: {
+      introduction: "Les Conditions Minimales contiennent des pièges récurrents qu'il faut savoir identifier.",
+      sections: [
+        {
+          title: "Information inutile",
+          content: "Données qui ne servent à rien :",
+          examples: [
+            "Énoncé donne une info superflue pour induire en erreur",
+            "Condition donne une info qui ne répond pas à la question",
+            "Ne pas confondre 'utile' et 'suffisant'",
+          ],
+        },
+        {
+          title: "Information cachée",
+          content: "Données implicites dans l'énoncé :",
+          tips: [
+            "'Jean a 3 ans de plus que Marie' → 1 équation (J = M + 3)",
+            "'Triangle isocèle' → 2 côtés égaux (info géométrique)",
+            "'Nombre pair' → divisible par 2",
+          ],
+        },
+        {
+          title: "Conditions contradictoires",
+          content: "Parfois les deux conditions ensemble sont impossibles :",
+          examples: [
+            "Si (1) et (2) se contredisent → Réponse E",
+            "Rare mais possible : bien vérifier la compatibilité",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Extraire TOUTES les infos de l'énoncé",
+        "Ne pas négliger les données implicites",
+        "Vérifier la compatibilité des conditions",
+        "Information utile ≠ information suffisante",
+      ],
+    },
+  },
+
+  // NOUVEAUX COURS - COMPRÉHENSION
+  {
+    id: "comprehension-arguments",
+    title: "Identifier les Arguments",
+    category: "Compréhension de Textes",
+    type: "Fiche",
+    duration: "11 min",
+    content: {
+      introduction: "Savoir identifier la structure argumentative d'un texte est essentiel pour bien comprendre.",
+      sections: [
+        {
+          title: "Structure d'un argument",
+          content: "Composantes à repérer :",
+          examples: [
+            "**Thèse** : Position défendue par l'auteur",
+            "**Arguments** : Raisons qui soutiennent la thèse",
+            "**Exemples** : Illustrations concrètes",
+            "**Contre-arguments** : Objections possibles et réfutations",
+          ],
+        },
+        {
+          title: "Mots de liaison argumentatifs",
+          content: "Repères linguistiques :",
+          tips: [
+            "**Addition** : de plus, en outre, également",
+            "**Opposition** : cependant, néanmoins, toutefois, or",
+            "**Cause** : car, parce que, en effet, puisque",
+            "**Conséquence** : donc, ainsi, par conséquent, c'est pourquoi",
+          ],
+        },
+        {
+          title: "Types d'arguments",
+          content: "Reconnaître la nature :",
+          examples: [
+            "**Argument d'autorité** : Citation d'expert",
+            "**Argument logique** : Raisonnement déductif",
+            "**Argument par l'exemple** : Cas concret",
+            "**Argument par analogie** : Comparaison avec situation similaire",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Identifier la thèse principale du texte",
+        "Repérer les mots de liaison pour suivre le raisonnement",
+        "Distinguer arguments principaux et secondaires",
+        "Attention aux contre-arguments réfutés",
+      ],
+    },
+  },
+  {
+    id: "comprehension-implicite",
+    title: "Comprendre l'Implicite",
+    category: "Compréhension de Textes",
+    type: "Cours",
+    duration: "13 min",
+    content: {
+      introduction: "L'implicite est ce qui est suggéré sans être dit explicitement. C'est très testé au TAGE MAGE.",
+      sections: [
+        {
+          title: "Présupposés",
+          content: "Ce qui est admis comme vrai dans l'énoncé :",
+          examples: [
+            "'Jean a arrêté de fumer' → **présuppose** qu'il fumait avant",
+            "'Le nouveau directeur est compétent' → **présuppose** changement de directeur",
+          ],
+        },
+        {
+          title: "Sous-entendus",
+          content: "Ce que l'auteur suggère sans le dire :",
+          examples: [
+            "'Il fait beau aujourd'hui' (après 10 jours de pluie) → sous-entend que c'était rare",
+            "Contexte est crucial pour comprendre le sous-entendu",
+          ],
+        },
+        {
+          title: "Ton et connotation",
+          content: "Attitude de l'auteur :",
+          tips: [
+            "**Ironie** : Dit le contraire de ce qu'il pense",
+            "**Critique** : Termes négatifs, jugements",
+            "**Enthousiasme** : Superlatifs, admiratifs",
+            "**Neutralité** : Objectif, descriptif",
+          ],
+        },
+        {
+          title: "Déduire vs supposer",
+          content: "Différence cruciale :",
+          examples: [
+            "**Déduction valide** : Conséquence logique du texte",
+            "**Supposition** : Interprétation personnelle (à éviter !)",
+            "Se demander : 'Est-ce NÉCESSAIREMENT vrai d'après le texte ?'",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Présupposé = admis comme vrai dans la phrase",
+        "Sous-entendu = suggéré par le contexte",
+        "Attention au ton pour comprendre l'intention",
+        "Ne pas confondre déduction et supposition",
+      ],
+    },
+  },
+  {
+    id: "comprehension-vocabulaire",
+    title: "Vocabulaire en Contexte",
+    category: "Compréhension de Textes",
+    type: "Fiche",
+    duration: "9 min",
+    content: {
+      introduction: "Les questions de vocabulaire testent votre capacité à comprendre un mot selon son contexte.",
+      sections: [
+        {
+          title: "Sens contextuel",
+          content: "Le contexte détermine le sens :",
+          examples: [
+            "'Table' : meuble OU tableau de données (selon contexte)",
+            "'Régler' : ajuster OU payer OU résoudre",
+            "Toujours relire la phrase pour vérifier le sens",
+          ],
+        },
+        {
+          title: "Polysémie",
+          content: "Mots à plusieurs sens :",
+          tips: [
+            "Identifier le sens utilisé dans le texte",
+            "Éliminer les sens hors contexte",
+            "Vérifier la cohérence avec le reste du texte",
+          ],
+        },
+        {
+          title: "Synonymes en contexte",
+          content: "Remplacer sans changer le sens :",
+          examples: [
+            "Le synonyme doit fonctionner dans LA phrase du texte",
+            "Pas forcément le synonyme général mais contextuel",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Contexte prime sur le sens général",
+        "Relire la phrase avec le mot de remplacement",
+        "Vérifier que le sens global reste cohérent",
+      ],
+    },
+  },
+
+  // NOUVEAUX COURS - RÉSOLUTION DE PROBLÈMES
+  {
+    id: "problemes-melanges",
+    title: "Problèmes de Mélanges",
+    category: "Résolution de Problèmes",
+    type: "Cours",
+    duration: "14 min",
+    content: {
+      introduction: "Les problèmes de mélanges (concentrations, alliages, prix moyens) utilisent la règle de la moyenne pondérée.",
+      sections: [
+        {
+          title: "Principe de base",
+          content: "Conservation de la quantité totale :",
+          examples: [
+            "**Quantité finale = Somme des quantités initiales**",
+            "**Concentration finale × Quantité finale = Somme (Concentration × Quantité) de chaque composant**",
+          ],
+        },
+        {
+          title: "Mélanges de solutions",
+          content: "Concentration et volume :",
+          examples: [
+            "10L à 20% + 5L à 50% = 15L à ?",
+            "Quantité pure : 10×0.2 + 5×0.5 = 2 + 2.5 = 4.5L",
+            "Concentration : 4.5/15 = 30%",
+          ],
+        },
+        {
+          title: "Alliages métalliques",
+          content: "Même principe :",
+          tips: [
+            "Calculer la masse totale de chaque métal",
+            "Diviser par la masse totale de l'alliage",
+            "Obtenir le pourcentage de chaque composant",
+          ],
+        },
+        {
+          title: "Prix moyens",
+          content: "Moyenne pondérée :",
+          examples: [
+            "3 kg à 5€/kg + 2 kg à 8€/kg",
+            "Prix total : 3×5 + 2×8 = 31€",
+            "Prix moyen : 31€ / 5kg = 6.20€/kg",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Toujours calculer les quantités totales",
+        "Utiliser la moyenne pondérée (pas la moyenne simple)",
+        "Vérifier la cohérence : résultat entre les valeurs initiales",
+        "Tableau pour organiser les données",
+      ],
+    },
+  },
+  {
+    id: "problemes-age",
+    title: "Problèmes d'Âges",
+    category: "Résolution de Problèmes",
+    type: "Fiche",
+    duration: "10 min",
+    content: {
+      introduction: "Les problèmes d'âges se résolvent en posant des équations avec le temps comme variable.",
+      sections: [
+        {
+          title: "Principe fondamental",
+          content: "Tout le monde vieillit au même rythme :",
+          tips: [
+            "Dans n années, chacun aura son âge actuel + n",
+            "Il y a n années, chacun avait son âge actuel - n",
+            "L'écart d'âge entre deux personnes reste CONSTANT",
+          ],
+        },
+        {
+          title: "Méthode de résolution",
+          content: "Approche systématique :",
+          examples: [
+            "1. Poser les variables (âge actuel de chaque personne)",
+            "2. Traduire les relations en équations",
+            "3. Résoudre le système",
+            "4. Vérifier avec les conditions de l'énoncé",
+          ],
+        },
+        {
+          title: "Exemples types",
+          content: "Situations classiques :",
+          examples: [
+            "'Dans n ans, A aura le double de B'",
+            "'Il y a n ans, A avait l'âge de B aujourd'hui'",
+            "'L'écart d'âge est de x ans'",
+          ],
+        },
+      ],
+      keyPoints: [
+        "L'écart d'âge ne change jamais",
+        "Dans/il y a n ans : ajouter/soustraire n à tous les âges",
+        "Vérifiez votre solution avec toutes les conditions",
+      ],
+    },
+  },
+  {
+    id: "problemes-travail",
+    title: "Problèmes de Travail Collectif",
+    category: "Résolution de Problèmes",
+    type: "Cours",
+    duration: "13 min",
+    content: {
+      introduction: "Les problèmes de travail en équipe utilisent la notion de taux de travail (travail par unité de temps).",
+      sections: [
+        {
+          title: "Taux de travail",
+          content: "Concept fondamental :",
+          examples: [
+            "Si A fait le travail en 6h → taux = 1/6 du travail par heure",
+            "Si B fait le travail en 4h → taux = 1/4 du travail par heure",
+            "Ensemble : taux combiné = 1/6 + 1/4 = 5/12 par heure",
+          ],
+        },
+        {
+          title: "Formule générale",
+          content: "Travail = Taux × Temps :",
+          tips: [
+            "Si taux combiné = 1/T, alors temps nécessaire = T",
+            "Exemple : taux = 5/12 → temps = 12/5 = 2.4h",
+          ],
+        },
+        {
+          title: "Travail séquentiel",
+          content: "Quand les personnes travaillent l'une après l'autre :",
+          examples: [
+            "A travaille 2h (taux 1/6) : fait 2×(1/6) = 1/3 du travail",
+            "Reste 2/3 à faire",
+            "B seul avec taux 1/4 : temps = (2/3)/(1/4) = 8/3h",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Taux de travail = 1 / (temps pour faire seul)",
+        "Taux se additionnent quand travail simultané",
+        "Travail total = 1 (l'unité complète)",
+        "Vérifier que Taux × Temps = Travail",
+      ],
+    },
+  },
+  {
+    id: "problemes-optimisation",
+    title: "Problèmes d'Optimisation",
+    category: "Résolution de Problèmes",
+    type: "Cours",
+    duration: "15 min",
+    content: {
+      introduction: "Les problèmes d'optimisation cherchent à maximiser ou minimiser une quantité sous contraintes.",
+      sections: [
+        {
+          title: "Types d'optimisation",
+          content: "Objectifs courants :",
+          examples: [
+            "**Minimiser un coût** sous contraintes de production",
+            "**Maximiser un profit** avec ressources limitées",
+            "**Minimiser un temps** avec contraintes de vitesse",
+            "**Maximiser une aire** avec périmètre fixe",
+          ],
+        },
+        {
+          title: "Méthode algébrique",
+          content: "Approche par équations :",
+          tips: [
+            "1. Définir la variable (ce qu'on cherche à optimiser)",
+            "2. Exprimer la quantité à optimiser en fonction de cette variable",
+            "3. Identifier les contraintes (inégalités)",
+            "4. Tester les valeurs limites et caractéristiques",
+          ],
+        },
+        {
+          title: "Cas géométriques",
+          content: "Optimisation de formes :",
+          examples: [
+            "À périmètre fixé, le carré a l'aire maximale (parmi rectangles)",
+            "À aire fixée, le cercle a le périmètre minimal",
+            "Pour un volume donné, la sphère a la surface minimale",
+          ],
+        },
+        {
+          title: "Stratégie pratique",
+          content: "Au TAGE MAGE :",
+          tips: [
+            "Souvent, les valeurs extrêmes sont optimales",
+            "Tester les cas limites en premier",
+            "Vérifier que la solution respecte toutes les contraintes",
+            "Utiliser l'intuition géométrique quand possible",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Identifier clairement ce qu'on cherche à optimiser",
+        "Lister toutes les contraintes",
+        "Tester les valeurs aux bornes",
+        "Vérifier la faisabilité de la solution",
+      ],
+    },
+  },
+
+  // NOUVEAUX COURS - MÉTHODOLOGIE
+  {
+    id: "erreurs-eviter",
+    title: "Les 10 Erreurs à Éviter",
+    category: "Méthodologie",
+    type: "Guide",
+    duration: "14 min",
+    content: {
+      introduction: "Apprenez à éviter les erreurs les plus coûteuses au TAGE MAGE.",
+      sections: [
+        {
+          title: "Erreurs de gestion du temps",
+          content: "Pièges temporels :",
+          examples: [
+            "**1. Passer trop de temps sur une question** → Fixez-vous 2 min max",
+            "**2. Ne pas chronométrer** → Entraînement sans chrono = inutile",
+            "**3. Oublier de vérifier** → Gardez toujours 2-3 min",
+          ],
+        },
+        {
+          title: "Erreurs stratégiques",
+          content: "Mauvaises décisions :",
+          examples: [
+            "**4. Répondre au hasard** → Pénalité de -1, mieux vaut passer",
+            "**5. Traiter les questions dans l'ordre** → Commencez par les faciles",
+            "**6. Viser 100%** → Impossible et contre-productif",
+          ],
+        },
+        {
+          title: "Erreurs de calcul",
+          content: "Pièges techniques :",
+          tips: [
+            "**7. Ne pas simplifier avant** → Calculs plus longs et erreurs",
+            "**8. Négliger les unités** → Vérifiez la cohérence",
+            "**9. Erreurs de signes** → Relisez attentivement",
+          ],
+        },
+        {
+          title: "Erreur psychologique",
+          content: "Mental :",
+          examples: [
+            "**10. Paniquer sur un sous-test raté** → Un sous-test = 1/6 seulement",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Le temps est votre pire ennemi",
+        "Soyez stratégique, pas perfectionniste",
+        "Vérifiez toujours vos calculs rapidement",
+        "Gardez votre calme quoi qu'il arrive",
+      ],
+    },
+  },
+  {
+    id: "revision-efficace",
+    title: "Plan de Révision Efficace",
+    category: "Méthodologie",
+    type: "Guide",
+    duration: "16 min",
+    content: {
+      introduction: "Un bon plan de révision structure votre préparation pour maximiser vos progrès.",
+      sections: [
+        {
+          title: "Phase 1 : Diagnostic (Semaine 1-2)",
+          content: "Identifier vos points forts et faibles :",
+          tips: [
+            "Faire 2-3 tests blancs complets",
+            "Analyser vos scores par sous-test",
+            "Identifier vos 3 sous-tests les plus faibles",
+            "Noter les types d'erreurs récurrentes",
+          ],
+        },
+        {
+          title: "Phase 2 : Apprentissage (Semaines 3-6)",
+          content: "Acquérir méthodes et connaissances :",
+          examples: [
+            "Étudier les cours et fiches par sous-test",
+            "Faire des exercices ciblés (non chronométrés d'abord)",
+            "Comprendre chaque erreur en profondeur",
+            "Focus sur vos 3 sous-tests faibles",
+          ],
+        },
+        {
+          title: "Phase 3 : Entraînement (Semaines 7-10)",
+          content: "Automatiser et gagner en vitesse :",
+          tips: [
+            "Exercices chronométrés systématiquement",
+            "1 test blanc par semaine",
+            "Simuler les conditions réelles",
+            "Réduire progressivement le temps par question",
+          ],
+        },
+        {
+          title: "Phase 4 : Consolidation (Semaines 11-12)",
+          content: "Peaufiner et renforcer la confiance :",
+          examples: [
+            "2 tests blancs par semaine",
+            "Révisions légères des fiches",
+            "Focus sur la régularité, pas les nouveautés",
+            "Dernière semaine : repos relatif",
+          ],
+        },
+        {
+          title: "Rythme hebdomadaire idéal",
+          content: "Organisation type :",
+          tips: [
+            "**Lundi-Mercredi** : Exercices ciblés (1h30/jour)",
+            "**Jeudi** : Repos ou révision légère",
+            "**Vendredi-Samedi** : Exercices + cours (2h/jour)",
+            "**Dimanche** : Test blanc complet (2h) + analyse (1h)",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Diagnostic avant tout pour cibler les efforts",
+        "Progression : comprendre → s'entraîner → automatiser",
+        "Tests blancs réguliers indispensables",
+        "Dernière semaine : confiance, pas bourrage",
+      ],
+    },
+  },
 ];
 
 export const getCoursesByCategory = (category: string) => {
