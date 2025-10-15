@@ -1,9 +1,12 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Clock, Target, TrendingUp, Play, CheckCircle2 } from "lucide-react";
+import { Clock, Target, TrendingUp, Play, CheckCircle2, Calculator } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { useNavigate } from "react-router-dom";
 
 const Tests = () => {
+  const navigate = useNavigate();
+  
   const availableTests = [
     {
       id: 1,
@@ -143,8 +146,35 @@ const Tests = () => {
             ))}
           </div>
 
+          {/* Test Multiplication */}
+          <Card className="mt-12 bg-gradient-to-br from-primary/10 to-accent/10 border-primary/20">
+            <CardHeader>
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                  <Calculator className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <CardTitle className="text-card-foreground">Test des Tables de Multiplication</CardTitle>
+                  <CardDescription>Révisez vos bases en calcul mental</CardDescription>
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-muted-foreground">
+                Entraînez-vous avec ce test rapide de 20 questions sur les tables de multiplication. Parfait pour renforcer vos compétences en calcul mental avant le TAGE MAGE.
+              </p>
+              <Button 
+                onClick={() => navigate('/tests/multiplication')}
+                className="w-full bg-gradient-to-r from-primary to-primary-hover"
+              >
+                <Play className="mr-2 h-4 w-4" />
+                Commencer le test
+              </Button>
+            </CardContent>
+          </Card>
+
           {/* Tips Card */}
-          <Card className="mt-12 bg-gradient-to-br from-accent/10 to-primary/10 border-accent/20">
+          <Card className="mt-8 bg-gradient-to-br from-accent/10 to-primary/10 border-accent/20">
             <CardHeader>
               <CardTitle className="text-card-foreground">Conseils pour le test blanc</CardTitle>
             </CardHeader>

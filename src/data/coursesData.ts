@@ -2003,6 +2003,1085 @@ export const coursesData: CourseContent[] = [
       ],
     },
   },
+
+  // COURS SUPPLÉMENTAIRES - CALCUL & ARITHMÉTIQUE
+  {
+    id: "calcul-divisibilite",
+    title: "Critères de Divisibilité",
+    category: "Calcul",
+    type: "Fiche",
+    duration: "9 min",
+    content: {
+      introduction: "Les critères de divisibilité permettent de vérifier rapidement si un nombre est divisible par un autre sans faire la division.",
+      sections: [
+        {
+          title: "Critères essentiels",
+          content: "À connaître par cœur :",
+          examples: [
+            "**Par 2** : Le nombre se termine par 0, 2, 4, 6 ou 8",
+            "**Par 3** : La somme des chiffres est divisible par 3 (ex: 126 → 1+2+6=9, divisible par 3)",
+            "**Par 4** : Les deux derniers chiffres forment un nombre divisible par 4",
+            "**Par 5** : Le nombre se termine par 0 ou 5",
+            "**Par 9** : La somme des chiffres est divisible par 9",
+            "**Par 10** : Le nombre se termine par 0",
+          ],
+        },
+        {
+          title: "Critères avancés",
+          content: "Pour gagner du temps :",
+          examples: [
+            "**Par 6** : Divisible par 2 ET par 3",
+            "**Par 8** : Les trois derniers chiffres forment un nombre divisible par 8",
+            "**Par 11** : Différence alternée des chiffres divisible par 11 (ex: 1342 → 1-3+4-2=0)",
+            "**Par 12** : Divisible par 3 ET par 4",
+          ],
+        },
+        {
+          title: "Applications pratiques",
+          content: "Utilisation au TAGE MAGE :",
+          tips: [
+            "Simplifier rapidement des fractions",
+            "Identifier des multiples communs",
+            "Résoudre des problèmes de dénombrement",
+            "Éliminer des réponses impossibles",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Connaître par cœur les critères de 2, 3, 5, 9",
+        "Pour 6 et 12, combiner plusieurs critères",
+        "La somme des chiffres est cruciale pour 3 et 9",
+        "Utiliser pour simplifier avant de calculer",
+      ],
+    },
+  },
+  {
+    id: "calcul-pgcd-ppcm",
+    title: "PGCD et PPCM",
+    category: "Calcul",
+    type: "Cours",
+    duration: "12 min",
+    content: {
+      introduction: "Le PGCD et le PPCM sont essentiels pour résoudre des problèmes de divisibilité et de fractions.",
+      sections: [
+        {
+          title: "Définitions",
+          content: "Concepts fondamentaux :",
+          examples: [
+            "**PGCD** : Plus Grand Commun Diviseur - plus grand nombre qui divise les deux",
+            "**PPCM** : Plus Petit Commun Multiple - plus petit multiple commun aux deux",
+            "**Exemple** : PGCD(12,18)=6  PPCM(12,18)=36",
+          ],
+        },
+        {
+          title: "Méthode de calcul - Décomposition",
+          content: "Décomposer en facteurs premiers :",
+          tips: [
+            "Décomposer chaque nombre en produit de facteurs premiers",
+            "**PGCD** : Produit des facteurs communs avec plus petites puissances",
+            "**PPCM** : Produit de tous les facteurs avec plus grandes puissances",
+            "**Exemple** : 12=2²×3, 18=2×3² → PGCD=2×3=6, PPCM=2²×3²=36",
+          ],
+        },
+        {
+          title: "Algorithme d'Euclide (PGCD)",
+          content: "Méthode rapide pour grands nombres :",
+          examples: [
+            "Diviser le plus grand par le plus petit",
+            "Remplacer le plus grand par le reste",
+            "Continuer jusqu'à reste = 0",
+            "Le dernier diviseur est le PGCD",
+          ],
+        },
+        {
+          title: "Relations utiles",
+          content: "Propriétés à connaître :",
+          tips: [
+            "**a × b = PGCD(a,b) × PPCM(a,b)**",
+            "Si PGCD(a,b)=1, on dit que a et b sont premiers entre eux",
+            "PPCM utile pour additionner des fractions (dénominateur commun)",
+          ],
+        },
+      ],
+      keyPoints: [
+        "PGCD pour simplifier des fractions",
+        "PPCM pour mettre au même dénominateur",
+        "Décomposition en facteurs premiers = méthode universelle",
+        "Relation : a×b = PGCD×PPCM",
+      ],
+    },
+  },
+  {
+    id: "calcul-nombres-premiers",
+    title: "Nombres Premiers",
+    category: "Calcul",
+    type: "Fiche",
+    duration: "10 min",
+    content: {
+      introduction: "Les nombres premiers sont les briques élémentaires de l'arithmétique.",
+      sections: [
+        {
+          title: "Définition",
+          content: "Qu'est-ce qu'un nombre premier ?",
+          examples: [
+            "Nombre entier > 1 divisible uniquement par 1 et lui-même",
+            "2 est le seul nombre premier pair",
+            "1 n'est PAS un nombre premier",
+          ],
+        },
+        {
+          title: "Premiers à connaître",
+          content: "Les 25 premiers nombres premiers :",
+          examples: [
+            "2, 3, 5, 7, 11, 13, 17, 19, 23, 29",
+            "31, 37, 41, 43, 47, 53, 59, 61, 67, 71",
+            "73, 79, 83, 89, 97",
+          ],
+        },
+        {
+          title: "Test de primalité",
+          content: "Comment vérifier si n est premier ?",
+          tips: [
+            "Tester la divisibilité par tous les nombres premiers jusqu'à √n",
+            "Si aucun ne divise n, alors n est premier",
+            "**Exemple** : 97 → tester jusqu'à √97 ≈ 10 → tester 2,3,5,7",
+          ],
+        },
+        {
+          title: "Applications",
+          content: "Utilité pratique :",
+          examples: [
+            "Décomposition en facteurs premiers",
+            "Simplification de fractions",
+            "Résolution de problèmes de cryptographie",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Connaître les premiers jusqu'à 100 au minimum",
+        "2 est le seul nombre premier pair",
+        "Pour tester, diviser par premiers jusqu'à √n",
+        "Tout nombre se décompose en produit de premiers",
+      ],
+    },
+  },
+  {
+    id: "calcul-notation-scientifique",
+    title: "Notation Scientifique",
+    category: "Calcul",
+    type: "Fiche",
+    duration: "8 min",
+    content: {
+      introduction: "La notation scientifique permet de manipuler facilement les très grands et très petits nombres.",
+      sections: [
+        {
+          title: "Format",
+          content: "a × 10^n où 1 ≤ a < 10",
+          examples: [
+            "**3 500 000** = 3.5 × 10⁶",
+            "**0.000 045** = 4.5 × 10⁻⁵",
+            "**789** = 7.89 × 10²",
+          ],
+        },
+        {
+          title: "Opérations",
+          content: "Calculs en notation scientifique :",
+          tips: [
+            "**Multiplication** : Multiplier les a, additionner les exposants",
+            "(2×10³) × (3×10⁴) = 6×10⁷",
+            "**Division** : Diviser les a, soustraire les exposants",
+            "(8×10⁶) ÷ (2×10²) = 4×10⁴",
+          ],
+        },
+        {
+          title: "Comparaison",
+          content: "Ordonner des nombres :",
+          examples: [
+            "D'abord comparer les exposants",
+            "Si égaux, comparer les coefficients",
+            "3×10⁵ > 9×10⁴ (5 > 4)",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Format : a × 10^n avec 1 ≤ a < 10",
+        "Multiplication/division : gérer exposants séparément",
+        "Pratique pour très grands ou très petits nombres",
+        "Comparer d'abord les puissances de 10",
+      ],
+    },
+  },
+  {
+    id: "calcul-valeur-absolue",
+    title: "Valeur Absolue",
+    category: "Calcul",
+    type: "Fiche",
+    duration: "9 min",
+    content: {
+      introduction: "La valeur absolue mesure la distance à zéro, toujours positive.",
+      sections: [
+        {
+          title: "Définition",
+          content: "Distance à l'origine :",
+          examples: [
+            "**|x| = x** si x ≥ 0",
+            "**|x| = -x** si x < 0",
+            "**Exemples** : |5|=5, |-5|=5, |0|=0",
+          ],
+        },
+        {
+          title: "Propriétés",
+          content: "Règles de calcul :",
+          tips: [
+            "**|a × b| = |a| × |b|**",
+            "**|a/b| = |a| / |b|** (b≠0)",
+            "**|a + b| ≤ |a| + |b|** (inégalité triangulaire)",
+            "**|a - b|** représente la distance entre a et b",
+          ],
+        },
+        {
+          title: "Équations avec valeur absolue",
+          content: "Résolution :",
+          examples: [
+            "**|x| = a** (a>0) → x = a ou x = -a",
+            "**|x - 3| = 5** → x-3=5 ou x-3=-5 → x=8 ou x=-2",
+            "**|x| = -2** → Pas de solution (valeur absolue toujours ≥ 0)",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Valeur absolue toujours positive ou nulle",
+        "|x| représente la distance de x à 0",
+        "|a-b| représente la distance entre a et b",
+        "Résoudre en considérant les deux cas (+ et -)",
+      ],
+    },
+  },
+
+  // GÉOMÉTRIE APPROFONDIE
+  {
+    id: "geometrie-triangles-special",
+    title: "Triangles Particuliers",
+    category: "Calcul",
+    type: "Cours",
+    duration: "14 min",
+    content: {
+      introduction: "Certains triangles ont des propriétés spéciales qui facilitent grandement les calculs.",
+      sections: [
+        {
+          title: "Triangle équilatéral",
+          content: "Tous les côtés égaux, tous les angles = 60° :",
+          examples: [
+            "**Périmètre** : P = 3c",
+            "**Hauteur** : h = (c√3)/2",
+            "**Aire** : A = (c²√3)/4",
+            "Les trois hauteurs se coupent au centre",
+          ],
+        },
+        {
+          title: "Triangle isocèle",
+          content: "Deux côtés égaux :",
+          tips: [
+            "Les angles à la base sont égaux",
+            "La hauteur issue du sommet coupe la base en son milieu",
+            "Axe de symétrie passant par le sommet",
+          ],
+        },
+        {
+          title: "Triangle rectangle",
+          content: "Un angle droit (90°) :",
+          examples: [
+            "**Pythagore** : a² + b² = c² (c = hypoténuse)",
+            "**Aire** : A = (a×b)/2 (produit des deux côtés de l'angle droit)",
+            "**Triangles célèbres** : 3-4-5, 5-12-13, 8-15-17",
+          ],
+        },
+        {
+          title: "Triangle rectangle 30-60-90",
+          content: "Rapports de côtés à connaître :",
+          examples: [
+            "Côtés dans le rapport 1 : √3 : 2",
+            "Face à 30° : côté le plus court",
+            "Face à 60° : côté moyen",
+            "Face à 90° (hypoténuse) : côté le plus long",
+          ],
+        },
+        {
+          title: "Triangle rectangle 45-45-90",
+          content: "Triangle rectangle isocèle :",
+          tips: [
+            "Côtés dans le rapport 1 : 1 : √2",
+            "Deux côtés égaux (les cathètes)",
+            "Hypoténuse = côté × √2",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Équilatéral : tout égal (côtés et angles 60°)",
+        "Rectangle : Pythagore indispensable",
+        "Connaître les triangles 3-4-5 et 30-60-90",
+        "Isocèle : deux côtés et deux angles égaux",
+      ],
+    },
+  },
+  {
+    id: "geometrie-cercle-approfondi",
+    title: "Le Cercle - Propriétés Avancées",
+    category: "Calcul",
+    type: "Cours",
+    duration: "13 min",
+    content: {
+      introduction: "Le cercle possède des propriétés géométriques riches très utiles au TAGE MAGE.",
+      sections: [
+        {
+          title: "Formules de base",
+          content: "À maîtriser absolument :",
+          examples: [
+            "**Circonférence** : C = 2πr = πd",
+            "**Aire** : A = πr²",
+            "**Relation** : r = d/2 (rayon = diamètre/2)",
+            "**π ≈ 3.14** ou **22/7** pour les calculs",
+          ],
+        },
+        {
+          title: "Arcs et secteurs",
+          content: "Portions de cercle :",
+          tips: [
+            "**Longueur d'arc** : L = (angle/360°) × 2πr",
+            "**Aire d'un secteur** : A = (angle/360°) × πr²",
+            "**Exemple** : Secteur de 90° = 1/4 du cercle",
+          ],
+        },
+        {
+          title: "Corde et distance au centre",
+          content: "Relations importantes :",
+          examples: [
+            "Le rayon perpendiculaire à une corde la coupe en son milieu",
+            "Deux cordes égales sont à égale distance du centre",
+            "Diamètre = plus grande corde possible",
+          ],
+        },
+        {
+          title: "Angles inscrits",
+          content: "Angle au centre vs angle inscrit :",
+          tips: [
+            "Angle inscrit = moitié de l'angle au centre (même arc)",
+            "Angle inscrit dans un demi-cercle = 90°",
+            "Utile pour résoudre des problèmes de géométrie complexes",
+          ],
+        },
+      ],
+      keyPoints: [
+        "C = 2πr et A = πr² à connaître parfaitement",
+        "Pour arc ou secteur, multiplier par (angle/360°)",
+        "Angle inscrit = moitié angle au centre",
+        "Rayon ⊥ corde → coupe la corde en 2",
+      ],
+    },
+  },
+  {
+    id: "geometrie-angles",
+    title: "Propriétés des Angles",
+    category: "Calcul",
+    type: "Fiche",
+    duration: "11 min",
+    content: {
+      introduction: "Maîtriser les relations entre angles est essentiel en géométrie.",
+      sections: [
+        {
+          title: "Types d'angles",
+          content: "Classification :",
+          examples: [
+            "**Aigu** : 0° < angle < 90°",
+            "**Droit** : angle = 90°",
+            "**Obtus** : 90° < angle < 180°",
+            "**Plat** : angle = 180°",
+            "**Réflexe** : 180° < angle < 360°",
+          ],
+        },
+        {
+          title: "Angles complémentaires et supplémentaires",
+          content: "Relations entre angles :",
+          tips: [
+            "**Complémentaires** : Somme = 90°",
+            "**Supplémentaires** : Somme = 180°",
+            "**Exemple** : 30° et 60° sont complémentaires",
+            "**Exemple** : 110° et 70° sont supplémentaires",
+          ],
+        },
+        {
+          title: "Angles et droites parallèles",
+          content: "Quand deux parallèles sont coupées par une sécante :",
+          examples: [
+            "**Angles correspondants** : égaux",
+            "**Angles alternes-internes** : égaux",
+            "**Angles alternes-externes** : égaux",
+            "**Angles internes du même côté** : supplémentaires (somme = 180°)",
+          ],
+        },
+        {
+          title: "Somme des angles",
+          content: "Dans les polygones :",
+          tips: [
+            "**Triangle** : 180°",
+            "**Quadrilatère** : 360°",
+            "**Polygone à n côtés** : (n-2) × 180°",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Complémentaires : somme 90°, Supplémentaires : somme 180°",
+        "Angles d'un triangle : toujours 180°",
+        "Parallèles coupées : angles correspondants égaux",
+        "Polygone n côtés : (n-2)×180°",
+      ],
+    },
+  },
+  {
+    id: "geometrie-quadrilateres",
+    title: "Les Quadrilatères",
+    category: "Calcul",
+    type: "Cours",
+    duration: "12 min",
+    content: {
+      introduction: "Les quadrilatères (polygones à 4 côtés) ont chacun des propriétés spécifiques.",
+      sections: [
+        {
+          title: "Le carré",
+          content: "Tous les côtés égaux, tous les angles droits :",
+          examples: [
+            "**Périmètre** : P = 4c",
+            "**Aire** : A = c²",
+            "**Diagonales** : égales, perpendiculaires, se coupent au milieu",
+            "**Longueur diagonale** : d = c√2",
+          ],
+        },
+        {
+          title: "Le rectangle",
+          content: "Angles droits, côtés opposés égaux :",
+          examples: [
+            "**Périmètre** : P = 2(L + l)",
+            "**Aire** : A = L × l",
+            "**Diagonales** : égales, se coupent au milieu",
+            "**Longueur diagonale** : d = √(L² + l²) (Pythagore)",
+          ],
+        },
+        {
+          title: "Le losange",
+          content: "Tous les côtés égaux :",
+          tips: [
+            "**Périmètre** : P = 4c",
+            "**Aire** : A = (d₁ × d₂)/2 (produit des diagonales / 2)",
+            "**Diagonales** : perpendiculaires, se coupent au milieu",
+            "Côtés opposés parallèles",
+          ],
+        },
+        {
+          title: "Le parallélogramme",
+          content: "Côtés opposés parallèles et égaux :",
+          examples: [
+            "**Périmètre** : P = 2(a + b)",
+            "**Aire** : A = base × hauteur",
+            "**Diagonales** : se coupent au milieu (mais pas forcément égales)",
+            "Angles opposés égaux",
+          ],
+        },
+        {
+          title: "Le trapèze",
+          content: "Un seul couple de côtés parallèles :",
+          tips: [
+            "**Aire** : A = ((B + b) × h) / 2",
+            "B = grande base, b = petite base, h = hauteur",
+            "**Trapèze isocèle** : côtés non parallèles égaux",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Carré : tout égal (4 côtés, 4 angles droits)",
+        "Rectangle : 4 angles droits, aire = L×l",
+        "Losange : 4 côtés égaux, aire = (d₁×d₂)/2",
+        "Trapèze : aire = ((B+b)×h)/2",
+      ],
+    },
+  },
+  {
+    id: "geometrie-volumes-avances",
+    title: "Volumes et Surfaces - Formules Avancées",
+    category: "Calcul",
+    type: "Cours",
+    duration: "15 min",
+    content: {
+      introduction: "Calculs de volumes et surfaces pour solides usuels et complexes.",
+      sections: [
+        {
+          title: "Prisme droit",
+          content: "Base quelconque × hauteur :",
+          examples: [
+            "**Volume** : V = Aire_base × hauteur",
+            "**Surface latérale** : Périmètre_base × hauteur",
+            "**Surface totale** : Surface_latérale + 2×Aire_base",
+          ],
+        },
+        {
+          title: "Cylindre",
+          content: "Prisme à base circulaire :",
+          tips: [
+            "**Volume** : V = πr²h",
+            "**Surface latérale** : S = 2πrh",
+            "**Surface totale** : S = 2πrh + 2πr² = 2πr(h+r)",
+          ],
+        },
+        {
+          title: "Pyramide",
+          content: "Sommet et base quelconque :",
+          examples: [
+            "**Volume** : V = (Aire_base × hauteur) / 3",
+            "Toujours diviser par 3 pour une pyramide",
+            "**Exemple** : Pyramide à base carrée de côté c et hauteur h : V = (c²h)/3",
+          ],
+        },
+        {
+          title: "Cône",
+          content: "Pyramide à base circulaire :",
+          tips: [
+            "**Volume** : V = (πr²h) / 3",
+            "**Surface latérale** : S = πr × a (a = apothème)",
+            "**Apothème** : a = √(r² + h²) (Pythagore)",
+          ],
+        },
+        {
+          title: "Sphère",
+          content: "Boule parfaite :",
+          examples: [
+            "**Volume** : V = (4/3)πr³",
+            "**Surface** : S = 4πr²",
+            "**Demi-sphère** : V = (2/3)πr³, S = 3πr² (avec base)",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Prisme/Cylindre : Aire_base × hauteur",
+        "Pyramide/Cône : (Aire_base × hauteur) / 3",
+        "Sphère : V = (4/3)πr³, S = 4πr²",
+        "Toujours vérifier les unités (m³ pour volume)",
+      ],
+    },
+  },
+  {
+    id: "geometrie-thales",
+    title: "Théorème de Thalès",
+    category: "Calcul",
+    type: "Cours",
+    duration: "11 min",
+    content: {
+      introduction: "Le théorème de Thalès permet de calculer des longueurs dans des triangles avec droites parallèles.",
+      sections: [
+        {
+          title: "Énoncé du théorème",
+          content: "Configuration de Thalès :",
+          examples: [
+            "Si (BC) // (DE) dans le triangle ADE",
+            "Alors **AB/AD = AC/AE = BC/DE**",
+            "Les rapports de longueurs correspondantes sont égaux",
+          ],
+        },
+        {
+          title: "Applications pratiques",
+          content: "Calculer une longueur inconnue :",
+          tips: [
+            "1. Identifier les droites parallèles",
+            "2. Repérer les triangles emboîtés",
+            "3. Écrire l'égalité des rapports",
+            "4. Résoudre avec un produit en croix",
+          ],
+        },
+        {
+          title: "Réciproque de Thalès",
+          content: "Démontrer que deux droites sont parallèles :",
+          examples: [
+            "Si AB/AD = AC/AE et B, C, D, E alignés dans le bon sens",
+            "Alors (BC) // (DE)",
+            "Utile pour prouver le parallélisme",
+          ],
+        },
+        {
+          title: "Erreurs à éviter",
+          content: "Pièges courants :",
+          tips: [
+            "Vérifier que les droites sont bien parallèles",
+            "Respecter l'ordre des points dans les rapports",
+            "Ne pas confondre avec Pythagore (angles droits)",
+            "Bien identifier le sommet commun des triangles",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Thalès : parallèles → rapports égaux",
+        "Réciproque : rapports égaux → parallèles",
+        "Produits en croix pour trouver l'inconnue",
+        "Vérifier l'alignement et l'ordre des points",
+      ],
+    },
+  },
+
+  // PROBABILITÉS ET STATISTIQUES
+  {
+    id: "stats-moyenne-mediane",
+    title: "Moyenne, Médiane et Mode",
+    category: "Calcul",
+    type: "Cours",
+    duration: "13 min",
+    content: {
+      introduction: "Les indicateurs de tendance centrale résument une série de données.",
+      sections: [
+        {
+          title: "La moyenne",
+          content: "Somme divisée par le nombre de valeurs :",
+          examples: [
+            "**Formule** : Moyenne = (somme des valeurs) / (nombre de valeurs)",
+            "**Exemple** : 5, 7, 9, 12 → Moyenne = (5+7+9+12)/4 = 33/4 = 8.25",
+            "Sensible aux valeurs extrêmes",
+          ],
+        },
+        {
+          title: "La médiane",
+          content: "Valeur centrale quand les données sont ordonnées :",
+          tips: [
+            "Ordonner les valeurs croissantes",
+            "**Si nombre impair** : Médiane = valeur centrale",
+            "**Si nombre pair** : Médiane = moyenne des 2 valeurs centrales",
+            "**Exemple** : 3, 5, 7, 9, 12 → Médiane = 7",
+            "**Exemple** : 3, 5, 7, 9 → Médiane = (5+7)/2 = 6",
+          ],
+        },
+        {
+          title: "Le mode",
+          content: "Valeur la plus fréquente :",
+          examples: [
+            "Valeur qui apparaît le plus souvent",
+            "**Exemple** : 2, 3, 3, 5, 7, 7, 7, 9 → Mode = 7",
+            "Peut avoir plusieurs modes (distribution multimodale)",
+          ],
+        },
+        {
+          title: "Comparaison",
+          content: "Quand utiliser chaque indicateur :",
+          tips: [
+            "**Moyenne** : Distribution symétrique, sans valeurs extrêmes",
+            "**Médiane** : Présence de valeurs extrêmes, distribution asymétrique",
+            "**Mode** : Données qualitatives, identifier la valeur la plus courante",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Moyenne = somme/nombre (sensible aux extrêmes)",
+        "Médiane = valeur centrale (robuste)",
+        "Mode = valeur la plus fréquente",
+        "Choisir l'indicateur adapté à la situation",
+      ],
+    },
+  },
+  {
+    id: "stats-etendue-ecart",
+    title: "Étendue et Écart-type",
+    category: "Calcul",
+    type: "Fiche",
+    duration: "10 min",
+    content: {
+      introduction: "Les indicateurs de dispersion mesurent la variabilité des données.",
+      sections: [
+        {
+          title: "L'étendue",
+          content: "Différence entre max et min :",
+          examples: [
+            "**Formule** : Étendue = Max - Min",
+            "**Exemple** : 2, 5, 8, 12, 15 → Étendue = 15 - 2 = 13",
+            "Simple mais très sensible aux valeurs extrêmes",
+          ],
+        },
+        {
+          title: "L'écart-type",
+          content: "Mesure de dispersion autour de la moyenne :",
+          tips: [
+            "Plus l'écart-type est grand, plus les données sont dispersées",
+            "Écart-type faible → données concentrées autour de la moyenne",
+            "**Interprétation** : environ 68% des données dans [moyenne-σ, moyenne+σ]",
+          ],
+        },
+        {
+          title: "Comparaison de séries",
+          content: "Utiliser dispersion et tendance centrale :",
+          examples: [
+            "Deux séries avec même moyenne peuvent avoir dispersions différentes",
+            "**Série A** : 5, 5, 5, 5 (écart-type = 0)",
+            "**Série B** : 1, 3, 7, 9 (même moyenne = 5, mais dispersée)",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Étendue = Max - Min (simple mais limité)",
+        "Écart-type mesure la dispersion autour de la moyenne",
+        "Grande dispersion → données hétérogènes",
+        "Faible dispersion → données homogènes",
+      ],
+    },
+  },
+  {
+    id: "proba-introduction",
+    title: "Introduction aux Probabilités",
+    category: "Calcul",
+    type: "Cours",
+    duration: "14 min",
+    content: {
+      introduction: "Les probabilités mesurent la chance qu'un événement se produise.",
+      sections: [
+        {
+          title: "Définition",
+          content: "Probabilité entre 0 et 1 :",
+          examples: [
+            "**P(événement) = Nombre de cas favorables / Nombre de cas possibles**",
+            "**0 ≤ P ≤ 1** (ou 0% à 100%)",
+            "P = 0 → événement impossible",
+            "P = 1 → événement certain",
+          ],
+        },
+        {
+          title: "Événements complémentaires",
+          content: "Événement contraire :",
+          tips: [
+            "**P(A̅) = 1 - P(A)**",
+            "Si P(réussir) = 0.7, alors P(échouer) = 1 - 0.7 = 0.3",
+            "Utile quand calculer le contraire est plus simple",
+          ],
+        },
+        {
+          title: "Probabilité d'une union",
+          content: "P(A ou B) :",
+          examples: [
+            "**Si A et B incompatibles** : P(A∪B) = P(A) + P(B)",
+            "**Si A et B compatibles** : P(A∪B) = P(A) + P(B) - P(A∩B)",
+            "Attention à ne pas compter deux fois l'intersection",
+          ],
+        },
+        {
+          title: "Probabilité d'une intersection",
+          content: "P(A et B) :",
+          tips: [
+            "**Si A et B indépendants** : P(A∩B) = P(A) × P(B)",
+            "**Exemple** : Lancer 2 dés, P(6 et 6) = 1/6 × 1/6 = 1/36",
+            "Si dépendants, utiliser probabilités conditionnelles",
+          ],
+        },
+      ],
+      keyPoints: [
+        "P = favorables/possibles (entre 0 et 1)",
+        "P(contraire) = 1 - P(événement)",
+        "Addition : attention à l'intersection (éviter double compte)",
+        "Indépendants : P(A et B) = P(A) × P(B)",
+      ],
+    },
+  },
+
+  // LOGIQUE AVANCÉE
+  {
+    id: "logique-tableaux-verite",
+    title: "Tableaux de Vérité",
+    category: "Raisonnement Logique",
+    type: "Cours",
+    duration: "12 min",
+    content: {
+      introduction: "Les tableaux de vérité permettent d'analyser systématiquement des propositions logiques.",
+      sections: [
+        {
+          title: "Connecteurs logiques",
+          content: "Opérateurs de base :",
+          examples: [
+            "**NON (¬)** : Négation - inverse la valeur",
+            "**ET (∧)** : Vrai si les deux sont vrais",
+            "**OU (∨)** : Vrai si au moins un est vrai",
+            "**IMPLIQUE (→)** : Faux uniquement si prémisse vraie et conclusion fausse",
+          ],
+        },
+        {
+          title: "Construction d'un tableau",
+          content: "Méthode systématique :",
+          tips: [
+            "Lister toutes les combinaisons possibles de valeurs (V/F)",
+            "Pour n propositions : 2^n lignes",
+            "Calculer colonne par colonne les résultats",
+            "Identifier les tautologies (toujours vrai) et contradictions (toujours faux)",
+          ],
+        },
+        {
+          title: "Lois de De Morgan",
+          content: "Transformations utiles :",
+          examples: [
+            "**¬(A ∧ B) = ¬A ∨ ¬B**",
+            "**¬(A ∨ B) = ¬A ∧ ¬B**",
+            "Utile pour simplifier des expressions logiques",
+          ],
+        },
+      ],
+      keyPoints: [
+        "ET : vrai uniquement si les deux vrais",
+        "OU : vrai si au moins un vrai",
+        "IMPLIQUE : faux seulement si V→F",
+        "Lois de De Morgan pour simplifier",
+      ],
+    },
+  },
+  {
+    id: "logique-quantificateurs",
+    title: "Quantificateurs et Négations",
+    category: "Raisonnement Logique",
+    type: "Fiche",
+    duration: "10 min",
+    content: {
+      introduction: "Les quantificateurs (∀, ∃) permettent d'exprimer des énoncés sur des ensembles.",
+      sections: [
+        {
+          title: "Quantificateur universel (∀)",
+          content: "Pour tout, quel que soit :",
+          examples: [
+            "**∀x, P(x)** : Pour tout x, P(x) est vrai",
+            "**Exemple** : ∀x ∈ ℕ, x² ≥ 0 (tout carré est positif)",
+            "Vrai uniquement si P vrai pour TOUS les x",
+          ],
+        },
+        {
+          title: "Quantificateur existentiel (∃)",
+          content: "Il existe au moins un :",
+          tips: [
+            "**∃x, P(x)** : Il existe au moins un x tel que P(x) est vrai",
+            "**Exemple** : ∃x ∈ ℕ, x² = 16 (vrai pour x=4)",
+            "Vrai si P vrai pour AU MOINS un x",
+          ],
+        },
+        {
+          title: "Négation des quantificateurs",
+          content: "Règles importantes :",
+          examples: [
+            "**¬(∀x, P(x)) = ∃x, ¬P(x)**",
+            "'Pas tous' = 'Il existe au moins un qui ne vérifie pas'",
+            "**¬(∃x, P(x)) = ∀x, ¬P(x)**",
+            "'Aucun n'existe' = 'Tous ne vérifient pas'",
+          ],
+        },
+      ],
+      keyPoints: [
+        "∀ (pour tout) : doit être vrai pour TOUS",
+        "∃ (il existe) : doit être vrai pour AU MOINS UN",
+        "Négation de ∀ donne ∃ et vice versa",
+        "Important pour les syllogismes",
+      ],
+    },
+  },
+
+  // EXPRESSION AVANCÉE
+  {
+    id: "expression-figures-style",
+    title: "Figures de Style",
+    category: "Expression",
+    type: "Fiche",
+    duration: "11 min",
+    content: {
+      introduction: "Les figures de style enrichissent l'expression et sont testées en compréhension.",
+      sections: [
+        {
+          title: "Figures d'analogie",
+          content: "Comparaisons et métaphores :",
+          examples: [
+            "**Comparaison** : Comparer avec 'comme', 'tel que' (Il est fort comme un lion)",
+            "**Métaphore** : Comparaison implicite sans outil (Cet homme est un lion)",
+            "**Personnification** : Attribuer qualités humaines à non-humain (Le vent hurle)",
+          ],
+        },
+        {
+          title: "Figures d'amplification",
+          content: "Exagération ou atténuation :",
+          tips: [
+            "**Hyperbole** : Exagération (Je meurs de faim)",
+            "**Litote** : Dire moins pour suggérer plus (Ce n'est pas mal = c'est bien)",
+            "**Euphémisme** : Atténuer une réalité désagréable (Il nous a quittés = il est mort)",
+          ],
+        },
+        {
+          title: "Figures d'opposition",
+          content: "Contrastes et paradoxes :",
+          examples: [
+            "**Antithèse** : Opposition de deux idées (Petit par la taille, grand par le cœur)",
+            "**Oxymore** : Alliance de mots contradictoires (Une douce violence)",
+            "**Antiphrase** : Ironie, dire le contraire (C'est du joli ! = c'est mal)",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Métaphore = comparaison implicite (sans 'comme')",
+        "Hyperbole = exagération volontaire",
+        "Litote = dire moins pour suggérer plus",
+        "Identifier la figure aide à comprendre l'intention",
+      ],
+    },
+  },
+  {
+    id: "expression-registres",
+    title: "Registres Littéraires",
+    category: "Expression",
+    type: "Fiche",
+    duration: "9 min",
+    content: {
+      introduction: "Le registre d'un texte révèle l'intention de l'auteur et les émotions transmises.",
+      sections: [
+        {
+          title: "Registres principaux",
+          content: "Tonalités courantes :",
+          examples: [
+            "**Lyrique** : Expression des sentiments personnels, émotions",
+            "**Tragique** : Fatalité, destin implacable, souffrance",
+            "**Comique** : Faire rire par situations drôles ou absurdes",
+            "**Ironique** : Dire le contraire de ce qu'on pense, moquerie",
+            "**Polémique** : Critique violente, ton combatif",
+            "**Didactique** : Volonté d'enseigner, expliquer",
+          ],
+        },
+        {
+          title: "Identifier le registre",
+          content: "Indices textuels :",
+          tips: [
+            "**Lexique** : Champs lexicaux dominants",
+            "**Ponctuation** : Exclamations, questions rhétoriques",
+            "**Figures de style** : Hyperboles, métaphores",
+            "**Syntaxe** : Phrases courtes (tension) ou longues (description)",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Registre = tonalité émotionnelle du texte",
+        "Révèle l'intention de l'auteur",
+        "S'appuie sur lexique, ponctuation, figures",
+        "Plusieurs registres peuvent coexister",
+      ],
+    },
+  },
+
+  // MÉTHODOLOGIE SUPPLÉMENTAIRE
+  {
+    id: "methodologie-analyser-erreurs",
+    title: "Analyse des Erreurs",
+    category: "Méthodologie",
+    type: "Guide",
+    duration: "13 min",
+    content: {
+      introduction: "Analyser ses erreurs est la clé pour progresser rapidement et éviter de les reproduire.",
+      sections: [
+        {
+          title: "Types d'erreurs",
+          content: "Classification pour mieux cibler :",
+          examples: [
+            "**Erreur de compréhension** : Mal lu ou mal compris l'énoncé",
+            "**Erreur de méthode** : Mauvaise approche du problème",
+            "**Erreur de calcul** : Faute d'inattention, calcul mental raté",
+            "**Erreur de temps** : Pas eu le temps de finir ou vérifier",
+            "**Erreur de connaissance** : Formule oubliée, règle inconnue",
+          ],
+        },
+        {
+          title: "Carnet d'erreurs",
+          content: "Tenir un journal systématique :",
+          tips: [
+            "Noter TOUTES les erreurs (même 'bêtes')",
+            "Pour chaque erreur : Type, Raison, Comment l'éviter",
+            "Relire avant chaque entraînement",
+            "Identifier les patterns récurrents",
+          ],
+        },
+        {
+          title: "Plan d'action correctif",
+          content: "Transformer erreur en progrès :",
+          examples: [
+            "**Si erreur de méthode** → Réviser le cours correspondant",
+            "**Si erreur de calcul récurrente** → Ralentir, vérifier systématiquement",
+            "**Si erreur de temps** → Revoir stratégie de gestion du temps",
+            "**Si erreur de connaissance** → Fiche de révision ciblée",
+          ],
+        },
+        {
+          title: "Révision espacée",
+          content: "Consolider les acquis :",
+          tips: [
+            "Refaire les questions ratées après 1 jour, puis 3 jours, puis 1 semaine",
+            "Si erreur persiste, réviser en profondeur le concept",
+            "Varier les exercices sur le même thème",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Chaque erreur = opportunité d'apprendre",
+        "Tenir un carnet d'erreurs systématique",
+        "Identifier les patterns pour cibler les révisions",
+        "Révision espacée pour ancrer durablement",
+      ],
+    },
+  },
+  {
+    id: "methodologie-simulation",
+    title: "Tests Blancs et Simulation",
+    category: "Méthodologie",
+    type: "Guide",
+    duration: "12 min",
+    content: {
+      introduction: "Les tests blancs sont indispensables pour se préparer aux conditions réelles du TAGE MAGE.",
+      sections: [
+        {
+          title: "Fréquence recommandée",
+          content: "Planning optimal :",
+          tips: [
+            "**Semaines 1-4** : 1 test blanc toutes les 2 semaines",
+            "**Semaines 5-8** : 1 test blanc par semaine",
+            "**Semaines 9-11** : 2 tests blancs par semaine",
+            "**Dernière semaine** : 1 test blanc max (J-5 ou J-6)",
+          ],
+        },
+        {
+          title: "Conditions de simulation",
+          content: "Reproduire l'épreuve réelle :",
+          examples: [
+            "Lieu calme, sans distraction",
+            "2 heures complètes, chronomètre visible",
+            "Matériel autorisé uniquement (stylos, brouillon)",
+            "Pas de pause entre sous-tests",
+            "Respecter rigoureusement le temps par sous-test (20 min)",
+          ],
+        },
+        {
+          title: "Analyse post-test",
+          content: "Exploiter au maximum chaque test blanc :",
+          tips: [
+            "**Immédiatement après** : Noter ressenti par sous-test",
+            "**Correction détaillée** : Analyser TOUTES les questions (bonnes et mauvaises)",
+            "**Identification patterns** : Quels types d'erreurs ? Quels sous-tests faibles ?",
+            "**Plan d'action** : Révisions ciblées sur les points faibles",
+          ],
+        },
+        {
+          title: "Interpréter les scores",
+          content: "Courbe de progression :",
+          examples: [
+            "Suivre l'évolution globale (pas se focaliser sur 1 test)",
+            "Variations normales : ±20 points d'un test à l'autre",
+            "Objectif : tendance générale à la hausse",
+            "Si stagnation > 3 tests : revoir stratégie de révision",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Tests blancs réguliers = NON NÉGOCIABLE",
+        "Conditions réelles : 2h, chronométré, sans pause",
+        "Analyse détaillée après chaque test",
+        "Suivre la tendance, pas les variations ponctuelles",
+      ],
+    },
+  },
 ];
 
 export const getCoursesByCategory = (category: string) => {
