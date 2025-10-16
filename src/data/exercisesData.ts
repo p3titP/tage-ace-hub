@@ -5,6 +5,7 @@ export interface Exercise {
   correctAnswer: number;
   explanation: string;
   difficulty: "Facile" | "Moyen" | "Difficile";
+  category?: string;
 }
 
 export interface SubtestData {
@@ -208,6 +209,7 @@ export const subtestsData: SubtestData[] = [
         correctAnswer: 2,
         explanation: "15% de 240 = (15/100) × 240 = 0.15 × 240 = 36",
         difficulty: "Facile",
+        category: "Pourcentages",
       },
       {
         id: 2,
@@ -216,6 +218,7 @@ export const subtestsData: SubtestData[] = [
         correctAnswer: 2,
         explanation: "x² = 144 signifie que x peut être 12 ou -12, car 12² = 144 et (-12)² = 144",
         difficulty: "Facile",
+        category: "Équations & Algèbre",
       },
       {
         id: 3,
@@ -224,6 +227,7 @@ export const subtestsData: SubtestData[] = [
         correctAnswer: 1,
         explanation: "Si 80€ représente 80% du prix initial (100% - 20%), alors prix initial = 80 ÷ 0.8 = 100€",
         difficulty: "Moyen",
+        category: "Pourcentages",
       },
       {
         id: 4,
@@ -232,6 +236,7 @@ export const subtestsData: SubtestData[] = [
         correctAnswer: 1,
         explanation: "Ordre des opérations : 7 × 8 = 56, 12 ÷ 4 = 3, donc 56 + 3 = 59",
         difficulty: "Facile",
+        category: "Calcul Rapide",
       },
       {
         id: 5,
@@ -240,6 +245,7 @@ export const subtestsData: SubtestData[] = [
         correctAnswer: 2,
         explanation: "2/5 = 4/10, donc 4/10 + 3/10 = 7/10",
         difficulty: "Facile",
+        category: "Fractions & Racines",
       },
       {
         id: 6,
@@ -248,6 +254,7 @@ export const subtestsData: SubtestData[] = [
         correctAnswer: 2,
         explanation: "Aire = longueur × largeur = 12 × 8 = 96 cm²",
         difficulty: "Facile",
+        category: "Géométrie",
       },
       {
         id: 7,
@@ -256,6 +263,7 @@ export const subtestsData: SubtestData[] = [
         correctAnswer: 2,
         explanation: "3x = 20 - 5 = 15, donc x = 15 ÷ 3 = 5",
         difficulty: "Facile",
+        category: "Équations & Algèbre",
       },
       {
         id: 8,
@@ -264,6 +272,7 @@ export const subtestsData: SubtestData[] = [
         correctAnswer: 2,
         explanation: "Périmètre d'un carré = 4 × côté = 4 × 9 = 36 cm",
         difficulty: "Facile",
+        category: "Géométrie",
       },
       {
         id: 9,
@@ -272,6 +281,7 @@ export const subtestsData: SubtestData[] = [
         correctAnswer: 2,
         explanation: "(15 + 5) = 20, 20 × 3 = 60, 60 - 10 = 50",
         difficulty: "Facile",
+        category: "Calcul Rapide",
       },
       {
         id: 10,
@@ -280,6 +290,7 @@ export const subtestsData: SubtestData[] = [
         correctAnswer: 0,
         explanation: "Prix initial 100 → +25% = 125 → -20% de 125 = -25 → 100. Donc 0% de variation.",
         difficulty: "Moyen",
+        category: "Pourcentages",
       },
       {
         id: 11,
@@ -288,6 +299,7 @@ export const subtestsData: SubtestData[] = [
         correctAnswer: 2,
         explanation: "√169 = 13, car 13 × 13 = 169",
         difficulty: "Facile",
+        category: "Fractions & Racines",
       },
       {
         id: 12,
@@ -296,6 +308,7 @@ export const subtestsData: SubtestData[] = [
         correctAnswer: 3,
         explanation: "x = 5 ÷ 2 = 2.5",
         difficulty: "Facile",
+        category: "Équations & Algèbre",
       },
       {
         id: 13,
@@ -304,6 +317,7 @@ export const subtestsData: SubtestData[] = [
         correctAnswer: 4,
         explanation: "30% de 150 = 45, 20% de 100 = 20, donc 45 + 20 = 65",
         difficulty: "Moyen",
+        category: "Pourcentages",
       },
       {
         id: 14,
@@ -312,6 +326,7 @@ export const subtestsData: SubtestData[] = [
         correctAnswer: 2,
         explanation: "Aire d'un triangle = (base × hauteur) ÷ 2 = (10 × 6) ÷ 2 = 30 cm²",
         difficulty: "Moyen",
+        category: "Géométrie",
       },
       {
         id: 15,
@@ -320,6 +335,7 @@ export const subtestsData: SubtestData[] = [
         correctAnswer: 2,
         explanation: "y = 3(4) + 2 = 12 + 2 = 14",
         difficulty: "Facile",
+        category: "Équations & Algèbre",
       },
       {
         id: 16,
@@ -328,6 +344,7 @@ export const subtestsData: SubtestData[] = [
         correctAnswer: 2,
         explanation: "18 ÷ 3 = 6, 4 × 5 = 20, donc 6 + 20 = 26",
         difficulty: "Moyen",
+        category: "Calcul Rapide",
       },
       {
         id: 17,
@@ -336,6 +353,7 @@ export const subtestsData: SubtestData[] = [
         correctAnswer: 3,
         explanation: "Moitié de 80 = 40, double de 40 = 80",
         difficulty: "Facile",
+        category: "Calcul Rapide",
       },
       {
         id: 18,
@@ -344,6 +362,7 @@ export const subtestsData: SubtestData[] = [
         correctAnswer: 3,
         explanation: "40% de 15€ = 6€, donc nouveau prix = 15 + 6 = 21€",
         difficulty: "Moyen",
+        category: "Pourcentages",
       },
     ],
   },

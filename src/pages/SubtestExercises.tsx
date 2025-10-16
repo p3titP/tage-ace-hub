@@ -1,9 +1,10 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, BookOpen, Trophy, Target } from "lucide-react";
+import { ArrowLeft, BookOpen, Trophy, Target, FolderOpen } from "lucide-react";
 import { subtestsData } from "@/data/exercisesData";
 import ExerciseCard from "@/components/ExerciseCard";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 const SubtestExercises = () => {
   const { subtestId } = useParams<{ subtestId: string }>();
@@ -23,6 +24,19 @@ const SubtestExercises = () => {
       </div>
     );
   }
+
+  // Group exercises by category
+  const exercisesByCategory = subtest.exercises.reduce((acc, exercise) => {
+    const category = exercise.category || "Général";
+    if (!acc[category]) {
+      acc[category] = [];
+    }
+    acc[category].push(exercise);
+    return acc;
+  }, {} as Record<string, typeof subtest.exercises>);
+
+  const categories = Object.keys(exercisesByCategory);
+  const hasCategories = categories.length > 1 || (categories.length === 1 && categories[0] !== "Général");
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -74,11 +88,46 @@ const SubtestExercises = () => {
       <section className="py-12 flex-1">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-8">
-            {subtest.exercises.map((exercise, index) => (
-              <div key={exercise.id} className="animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
-                <ExerciseCard exercise={exercise} exerciseNumber={index + 1} />
-              </div>
-            ))}
+            {hasCategories ? (
+              // Display exercises grouped by category
+              categories.map((category, catIndex) => (
+                <div key={category} className="space-y-4 animate-fade-in" style={{ animationDelay: `${catIndex * 100}ms` }}>
+                  {/* Category Header */}
+                  <Card className="bg-gradient-to-r from-primary/10 to-accent/10 border-primary/20">
+                    <CardHeader className="pb-3">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                            <FolderOpen className="h-5 w-5 text-primary" />
+                          </div>
+                          <CardTitle className="text-xl">{category}</CardTitle>
+                        </div>
+                        <Badge variant="secondary" className="text-sm">
+                          {exercisesByCategory[category].length} exercice{exercisesByCategory[category].length > 1 ? 's' : ''}
+                        </Badge>
+                      </div>
+                    </CardHeader>
+                  </Card>
+
+                  {/* Category Exercises */}
+                  {exercisesByCategory[category].map((exercise, index) => {
+                    const globalIndex = subtest.exercises.findIndex(e => e.id === exercise.id);
+                    return (
+                      <div key={exercise.id} className="animate-fade-in" style={{ animationDelay: `${(catIndex * 100) + (index * 50)}ms` }}>
+                        <ExerciseCard exercise={exercise} exerciseNumber={globalIndex + 1} />
+                      </div>
+                    );
+                  })}
+                </div>
+              ))
+            ) : (
+              // Display all exercises without categories
+              subtest.exercises.map((exercise, index) => (
+                <div key={exercise.id} className="animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
+                  <ExerciseCard exercise={exercise} exerciseNumber={index + 1} />
+                </div>
+              ))
+            )}
 
             {/* Coming Soon Card */}
             <Card className="bg-gradient-to-br from-primary/10 to-accent/10 border-primary/20 animate-fade-in">

@@ -57,9 +57,16 @@ const ExerciseCard = ({ exercise, exerciseNumber }: ExerciseCardProps) => {
           <CardTitle className="text-lg text-card-foreground">
             Exercice {exerciseNumber}
           </CardTitle>
-          <Badge className={getDifficultyColor(exercise.difficulty)}>
-            {exercise.difficulty}
-          </Badge>
+          <div className="flex items-center gap-2">
+            {exercise.category && (
+              <Badge variant="outline" className="text-xs">
+                {exercise.category}
+              </Badge>
+            )}
+            <Badge className={getDifficultyColor(exercise.difficulty)}>
+              {exercise.difficulty}
+            </Badge>
+          </div>
         </div>
         <CardDescription className="text-base text-foreground whitespace-pre-wrap">
           {exercise.question}
