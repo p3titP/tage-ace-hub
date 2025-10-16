@@ -3082,6 +3082,116 @@ export const coursesData: CourseContent[] = [
       ],
     },
   },
+  {
+    id: "calcul-tables-multiplication",
+    title: "Tables de Multiplication 1-20",
+    category: "Calcul",
+    type: "Cours",
+    duration: "20 min",
+    content: {
+      introduction: "La maîtrise parfaite des tables de multiplication jusqu'à 20 est cruciale pour le calcul mental rapide au TAGE MAGE. Ce cours vous aidera à les mémoriser et à les utiliser efficacement.",
+      sections: [
+        {
+          title: "Tables de 1 à 10 (Fondamentales)",
+          content: "Ces tables doivent être connues par cœur instantanément :",
+          examples: [
+            "**Table de 2** : 2, 4, 6, 8, 10, 12, 14, 16, 18, 20",
+            "**Table de 3** : 3, 6, 9, 12, 15, 18, 21, 24, 27, 30",
+            "**Table de 4** : 4, 8, 12, 16, 20, 24, 28, 32, 36, 40",
+            "**Table de 5** : 5, 10, 15, 20, 25, 30, 35, 40, 45, 50",
+            "**Table de 6** : 6, 12, 18, 24, 30, 36, 42, 48, 54, 60",
+            "**Table de 7** : 7, 14, 21, 28, 35, 42, 49, 56, 63, 70",
+            "**Table de 8** : 8, 16, 24, 32, 40, 48, 56, 64, 72, 80",
+            "**Table de 9** : 9, 18, 27, 36, 45, 54, 63, 72, 81, 90",
+            "**Table de 10** : 10, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+          ],
+        },
+        {
+          title: "Tables de 11 à 15 (Intermédiaires)",
+          content: "Ces tables sont très utiles pour gagner du temps :",
+          examples: [
+            "**Table de 11** : 11, 22, 33, 44, 55, 66, 77, 88, 99, 110, 121, 132, 143, 154, 165, 176, 187, 198, 209, 220",
+            "**Table de 12** : 12, 24, 36, 48, 60, 72, 84, 96, 108, 120, 132, 144, 156, 168, 180, 192, 204, 216, 228, 240",
+            "**Table de 13** : 13, 26, 39, 52, 65, 78, 91, 104, 117, 130, 143, 156, 169, 182, 195, 208, 221, 234, 247, 260",
+            "**Table de 14** : 14, 28, 42, 56, 70, 84, 98, 112, 126, 140, 154, 168, 182, 196, 210, 224, 238, 252, 266, 280",
+            "**Table de 15** : 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180, 195, 210, 225, 240, 255, 270, 285, 300",
+          ],
+        },
+        {
+          title: "Tables de 16 à 20 (Avancées)",
+          content: "Moins courantes mais très utiles pour les calculs complexes :",
+          examples: [
+            "**Table de 16** : 16, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 256, 272, 288, 304, 320",
+            "**Table de 17** : 17, 34, 51, 68, 85, 102, 119, 136, 153, 170, 187, 204, 221, 238, 255, 272, 289, 306, 323, 340",
+            "**Table de 18** : 18, 36, 54, 72, 90, 108, 126, 144, 162, 180, 198, 216, 234, 252, 270, 288, 306, 324, 342, 360",
+            "**Table de 19** : 19, 38, 57, 76, 95, 114, 133, 152, 171, 190, 209, 228, 247, 266, 285, 304, 323, 342, 361, 380",
+            "**Table de 20** : 20, 40, 60, 80, 100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300, 320, 340, 360, 380, 400",
+          ],
+        },
+        {
+          title: "Astuces de mémorisation",
+          content: "Techniques pour faciliter l'apprentissage :",
+          tips: [
+            "**Table de 9** : La somme des chiffres donne toujours 9 (18→1+8=9, 27→2+7=9)",
+            "**Table de 11** : Jusqu'à 99, on double le chiffre (11×3=33, 11×7=77)",
+            "**Table de 5** : Tous les résultats se terminent par 0 ou 5",
+            "**Table de 12** : 12×n = 10×n + 2×n (décomposer)",
+            "**Table de 15** : 15×n = 10×n + 5×n (simplifier)",
+            "**Commutativité** : 7×8 = 8×7, utilisez celle que vous connaissez mieux",
+          ],
+        },
+        {
+          title: "Stratégies de calcul rapide",
+          content: "Optimiser vos calculs en conditions d'examen :",
+          examples: [
+            "**Pour 16×n** : Doubler 4 fois (16=2×2×2×2)",
+            "**Pour 18×n** : Calculer 20×n puis soustraire 2×n",
+            "**Pour 19×n** : Calculer 20×n puis soustraire n",
+            "**Pour 17×n** : Calculer 10×n + 7×n",
+            "**Décomposition** : 14×15 = 14×10 + 14×5 = 140+70 = 210",
+          ],
+        },
+        {
+          title: "Produits remarquables utiles",
+          content: "Résultats à connaître par cœur :",
+          examples: [
+            "11² = 121 | 12² = 144 | 13² = 169 | 14² = 196 | 15² = 225",
+            "16² = 256 | 17² = 289 | 18² = 324 | 19² = 361 | 20² = 400",
+            "25² = 625 | 30² = 900 | 40² = 1600 | 50² = 2500",
+          ],
+        },
+        {
+          title: "Programme d'entraînement",
+          content: "Plan de révision efficace :",
+          tips: [
+            "**Jour 1-3** : Tables 1-10 (révision intensive 15 min/jour)",
+            "**Jour 4-7** : Tables 11-15 (10 nouvelles tables par jour)",
+            "**Jour 8-10** : Tables 16-20 (consolider avec exercices)",
+            "**Jour 11-14** : Révision globale + test chronométré",
+            "**Ensuite** : 5 minutes par jour pour maintenir",
+          ],
+        },
+        {
+          title: "Erreurs fréquentes à éviter",
+          content: "Pièges classiques :",
+          examples: [
+            "**7×8=56** souvent confondu avec 54",
+            "**6×7=42** souvent confondu avec 48",
+            "**12×12=144** souvent confondu avec 124",
+            "**13×13=169** souvent confondu avec 139",
+            "**15×16=240** souvent calculé comme 230",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Tables 1-10 : maîtrise instantanée obligatoire",
+        "Tables 11-15 : apprendre progressivement avec astuces",
+        "Tables 16-20 : utiliser la décomposition si nécessaire",
+        "Pratiquer 5-10 minutes par jour minimum",
+        "Utiliser le test de multiplication pour s'évaluer régulièrement",
+      ],
+    },
+  },
 ];
 
 export const getCoursesByCategory = (category: string) => {
