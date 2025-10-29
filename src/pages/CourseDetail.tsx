@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, BookOpen, Clock, CheckCircle2, Lightbulb } from "lucide-react";
 import { getCourseById } from "@/data/coursesData";
 import MultiplicationPractice from "@/components/MultiplicationPractice";
+import AlphabetPractice from "@/components/AlphabetPractice";
 
 const CourseDetail = () => {
   const { courseId } = useParams<{ courseId: string }>();
@@ -163,6 +164,11 @@ const CourseDetail = () => {
             {/* Multiplication Practice - Only for multiplication course */}
             {courseId === "calcul-tables-multiplication" && (
               <MultiplicationPractice />
+            )}
+
+            {/* Alphabet Practice - Only for alphabet course */}
+            {courseId === "entrainement-alphabet" && (
+              <AlphabetPractice />
             )}
 
             {/* Navigation */}

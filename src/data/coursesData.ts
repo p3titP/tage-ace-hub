@@ -3192,6 +3192,76 @@ export const coursesData: CourseContent[] = [
       ],
     },
   },
+  {
+    id: "entrainement-alphabet",
+    title: "Entraînement Alphabet - Position des Lettres",
+    category: "Méthodologie",
+    type: "Cours",
+    duration: "10 min",
+    content: {
+      introduction: "Cet exercice interactif vous permet de maîtriser rapidement la position de chaque lettre dans l'alphabet. Une compétence utile pour les tests de raisonnement logique et de codage.",
+      sections: [
+        {
+          title: "Pourquoi s'entraîner sur l'alphabet ?",
+          content: "La connaissance instantanée de la position des lettres dans l'alphabet est essentielle pour :",
+          examples: [
+            "**Tests de codage** : Décrypter rapidement des messages codés (A=1, B=2...)",
+            "**Suites logiques** : Identifier les patterns alphabétiques",
+            "**Raisonnement spatial** : Visualiser les distances entre lettres",
+            "**Gain de temps** : Éviter de compter manuellement depuis A",
+          ],
+        },
+        {
+          title: "Méthode de mémorisation",
+          content: "Stratégies pour mémoriser efficacement :",
+          tips: [
+            "**Points de repère** : A=1, E=5, J=10, O=15, T=20, Z=26",
+            "**Groupes de 5** : ABCDE (1-5), FGHIJ (6-10), KLMNO (11-15), etc.",
+            "**Voyelles** : A=1, E=5, I=9, O=15, U=21, Y=25",
+            "**Calcul rapide** : Pour H, penser 'après G qui est 7, donc 8'",
+            "**Milieu de l'alphabet** : M=13, N=14 (lettres centrales)",
+          ],
+        },
+        {
+          title: "Astuces de calcul rapide",
+          content: "Techniques pour trouver rapidement une position :",
+          examples: [
+            "**Début d'alphabet (A-J)** : Compter directement (très rapide)",
+            "**Milieu (K-P)** : Partir de J=10 ou utiliser M=13 comme repère",
+            "**Fin (Q-Z)** : Compter à rebours depuis Z=26",
+            "**Lettres courantes** : Mémoriser S=19, T=20, X=24",
+          ],
+        },
+        {
+          title: "Exercice pratique interactif",
+          content: "Utilisez l'exercice ci-dessous pour vous entraîner. Une lettre aléatoire apparaît, tapez son numéro, et une nouvelle lettre apparaît automatiquement après chaque réponse.",
+          tips: [
+            "Visez d'abord la précision, la vitesse viendra ensuite",
+            "Entraînez-vous 5-10 minutes par jour",
+            "Essayez de répondre sans compter manuellement",
+            "Notez vos lettres faibles et concentrez-vous dessus",
+          ],
+        },
+        {
+          title: "Progression recommandée",
+          content: "Plan d'entraînement sur 7 jours :",
+          examples: [
+            "**Jours 1-2** : Maîtriser A-J (les 10 premières lettres)",
+            "**Jours 3-4** : Apprendre K-T (lettres du milieu)",
+            "**Jours 5-6** : Consolider U-Z (fin de l'alphabet)",
+            "**Jour 7** : Test global avec toutes les lettres",
+          ],
+        },
+      ],
+      keyPoints: [
+        "Mémorisez les points de repère : J=10, M=13, T=20, Z=26",
+        "Utilisez les voyelles comme références intermédiaires",
+        "Entraînez-vous quotidiennement pour automatiser",
+        "Objectif : réponse instantanée sans compter",
+        "Utilisez l'exercice interactif pour tester vos progrès",
+      ],
+    },
+  },
 ];
 
 export const getCoursesByCategory = (category: string) => {
