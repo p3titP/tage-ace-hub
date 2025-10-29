@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
@@ -10,6 +10,7 @@ const AlphabetPractice = () => {
   const [score, setScore] = useState<number>(0);
   const [attempts, setAttempts] = useState<number>(0);
   const [feedback, setFeedback] = useState<{ message: string; type: "success" | "error" | "" }>({ message: "", type: "" });
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const generateLetter = () => {
     const randomIndex = Math.floor(Math.random() * 26);
@@ -29,9 +30,16 @@ const AlphabetPractice = () => {
     const value = e.target.value;
     setUserInput(value);
 
-    // Auto-check when user enters a number
+    // Clear any existing timeout
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+
+    // Auto-check after user stops typing for 800ms
     if (value && !isNaN(Number(value))) {
-      checkAnswer(Number(value));
+      timeoutRef.current = setTimeout(() => {
+        checkAnswer(Number(value));
+      }, 800);
     }
   };
 
@@ -62,6 +70,9 @@ const AlphabetPractice = () => {
   };
 
   const handleReset = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
     setScore(0);
     setAttempts(0);
     setUserInput("");
