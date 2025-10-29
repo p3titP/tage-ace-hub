@@ -35,11 +35,11 @@ const AlphabetPractice = () => {
       clearTimeout(timeoutRef.current);
     }
 
-    // Auto-check after user stops typing for 800ms
+    // Auto-check after user stops typing for 700ms
     if (value && !isNaN(Number(value))) {
       timeoutRef.current = setTimeout(() => {
         checkAnswer(Number(value));
-      }, 800);
+      }, 700);
     }
   };
 
