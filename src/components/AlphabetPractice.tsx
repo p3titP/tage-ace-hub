@@ -48,7 +48,7 @@ const AlphabetPractice = () => {
         setUserInput("");
         setFeedback({ message: "", type: "" });
         generateLetter();
-      }, 500);
+      }, 1500);
     } else {
       setFeedback({ message: `Incorrect. ${currentLetter} = ${correctAnswer}`, type: "error" });
       
@@ -57,7 +57,7 @@ const AlphabetPractice = () => {
         setUserInput("");
         setFeedback({ message: "", type: "" });
         generateLetter();
-      }, 1500);
+      }, 2500);
     }
   };
 
